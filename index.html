@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Portland Itinerary</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Your Portland Itinerary</h1>
+        </div>
+        <div>
+            <h2>Itinerary</h2>
+        </div>
+        <ul>
+            <li>Events</li>
+            <li>Restaurants</li>
+            <li>Bars</li>
+            <li>Coffee Shops</li>
+        </ul>
+    </header>
+
+    <main>
+        <!--This will hold the Time, Weather and News-->
+        <div>
+            <!--Weather and Time-->
+            <div>
+                <div id="weather"></div>
+                <div id=localTime></div>
+            </div>
+            <!--News-->
+            <div id=newsArticle></div>
+        </div>
+        <!--This will hold the users itinerary-->
+        <div>
+            <ul>
+                <!--We will append the li which will be each day-->
+            </ul>
+        </div>
+
+        <!--This will hold our events section-->
+        <div>
+            <h1>Events</h1>
+            <div>
+                <div id="listOfEvents">
+                    <!-- A lot of the commented section will be done in JS
+                    <div id=eventOne>
+                        <div>
+                            <h2>"Title of Event"</h2>
+                        </div>
+                        <div>
+                            "link for event image"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=eventTwo>
+                        <div>
+                            <h2>"Title of Event"</h2>
+                        </div>
+                        <div>
+                            "link for event image"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=eventThree>
+                        <div>
+                            <h2>"Title of Event"</h2>
+                        </div>
+                        <div>
+                            "link for event image"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=eventFour>
+                        <div>
+                            <h2>"Title of Event"</h2>
+                        </div>
+                        <div>
+                            "link for event image"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <!--This will hold our Restaurants section -->
+        <div>
+            <h1>Restaurants</h1>
+            <div>
+                <div id="listOfRestaurant">
+                    <!-- A lot of the commented section will be done in JS
+                    <div id=restaurantOne>
+                        <div>
+                            <h2>"Title of Restaurant"</h2>
+                        </div>
+                        <div>
+                            "link for image of Restaurant"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=restaurantTwo>
+                        <div>
+                            <h2>"Title of Restaurant"</h2>
+                        </div>
+                        <div>
+                            "link for image of Restaurant"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=restaurantThree>
+                        <div>
+                            <h2>"Title of Restaurant"</h2>
+                        </div>
+                        <div>
+                            "link for image of Restaurant"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=restaurantFour>
+                        <div>
+                            <h2>"Title of Restaurant"</h2>
+                        </div>
+                        <div>
+                            "link for image of Restaurant"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <!--This will hold our Bars section-->
+        <div>
+            <h1>Bars</h1>
+            <div>
+                <div id="listOfBars">
+                    <!-- A lot of the commented section will be done in JS
+                    <div id=barOne>
+                        <div>
+                            <h2>"Title of Bar"</h2>
+                        </div>
+                        <div>
+                            "link for image of bar"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=barTwo>
+                        <div>
+                            <h2>"Title of Bar"</h2>
+                        </div>
+                        <div>
+                            "link for image of bar"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=barThree>
+                        <div>
+                            <h2>"Title of Bar"</h2>
+                        </div>
+                        <div>
+                            "link for image of bar"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=barFour>
+                        <div>
+                            <h2>"Title of Bar"</h2>
+                        </div>
+                        <div>
+                            "link for image of bar"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <!--This will hold our Coffee section-->
+        <div>
+            <h1>Coffee Shops</h1>
+            <div>
+                <div id="listOfCoffee">
+                    <!-- A lot of the commented section will be done in JS
+                    <div id=coffeeOne>
+                        <div>
+                            <h2>"Title of Coffee Shop"</h2>
+                        </div>
+                        <div>
+                            "link for image of Coffee Shop"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=coffeeTwo>
+                        <div>
+                            <h2>"Title of Coffee Shop"</h2>
+                        </div>
+                        <div>
+                            "link for image of Coffee Shop"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=coffeeThree>
+                        <div>
+                            <h2>"Title of Coffee Shop"</h2>
+                        </div>
+                        <div>
+                            "link for image of Coffee Shop"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+                    <div id=coffeeFour>
+                        <div>
+                            <h2>"Title of Coffee Shop"</h2>
+                        </div>
+                        <div>
+                            "link for image of Coffee Shop"
+                            "link to google maps"
+                        </div>
+                        <ul>
+                            <li>Date</li>
+                            <li>Time</li>
+                            <li>Add</li>
+                    </div>
+
+            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
+                    -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+<!--We havve not discussed anything here yet.-->
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
