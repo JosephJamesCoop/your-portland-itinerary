@@ -7,19 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Your Portland Itinerary</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 </head>
 
 <body>
-    <header>
-        <div>
-            <h1>Your Portland Itinerary</h1>
-        </div>
-        <ul>
-            <li id='itinerary'>Itinerary</li>
-            <li>Events</li>
-            <li>Restaurants</li>
-            <li>Bars</li>
-            <li>Coffee Shops</li>
+    <!-- style navbar with red background -->
+    <header class="navbar is-danger">
+        <!-- center navbar elements -->
+        <ul class="navbar-start navbar-end">
+            <a href="#shopping" class="navbar-item">Shopping</a>
+            <a href="#restaurants" class="navbar-item">Restaurants</a>
+            <li class="navbar-item title mb-0">Your Portland Itinerary</li>
+            <a href="bars" class="navbar-item">Bars</a>
+            <a href="coffee-shops" class="navbar-item">Coffee Shops</a>
         </ul>
     </header>
 
@@ -42,8 +42,8 @@
         </div>
 
         <!--This will hold our events section-->
-        <div>
-            <h1>Events</h1>
+        <div id="shopping" class="section">
+            <h1 class="title">Shopping</h1>
             <div>
                 <div id="listOfEvents">
                     <!-- A lot of the commented section will be done in JS
@@ -106,8 +106,8 @@
         </div>
 
         <!--This will hold our Restaurants section -->
-        <div>
-            <h1>Restaurants</h1>
+        <div id="restaurants" class="section">
+            <h1 class="title">Restaurants</h1>
             <div>
                 <div id="listOfRestaurant">
                     <!-- A lot of the commented section will be done in JS
@@ -174,8 +174,8 @@
         </div>
 
         <!--This will hold our Bars section-->
-        <div>
-            <h1>Bars</h1>
+        <div id="bars" class="section">
+            <h1 class="title">Bars</h1>
             <div>
                 <div id="listOfBars">
                     <!-- A lot of the commented section will be done in JS
@@ -242,8 +242,8 @@
         </div>
 
         <!--This will hold our Coffee section-->
-        <div>
-            <h1>Coffee Shops</h1>
+        <div id="coffee-shops" class="section">
+            <h1 class="title">Coffee Shops</h1>
             <div>
                 <div id="listOfCoffee">
                     <!-- A lot of the commented section will be done in JS
