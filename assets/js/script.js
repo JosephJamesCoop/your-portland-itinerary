@@ -1,16 +1,16 @@
  // Load Portland time.
-
- window.onload = function() {
+ var loadTime = function() {
     var localTime = document.getElementById("localTime");
-    var dayEl = document.createElement("li")
-   dayEl.textContent = moment().format("dddd"); 
-    localTime.append(dayEl);  
-    var dateEl = document.createElement("li")
-   dateEl.textContent = moment().format("MMM do YYYY"); 
-    localTime.append(dateEl);  
+    localTime.innerHTML = "";
     var hourEl = document.createElement("li")
     hourEl.textContent = moment().format("LT"); 
-     localTime.append(hourEl);  
-  
-  };
-  
+    hourEl.setAttribute("class", "is-size-2")
+    localTime.append(hourEl);
+    var dateEl = document.createElement("li")
+    dateEl.textContent = moment().format("dddd, MMM do, YYYY"); 
+    localTime.append(dateEl);  
+}
+
+loadTime();
+
+setInterval(loadTime, 1000);
