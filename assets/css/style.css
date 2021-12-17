@@ -1,3 +1,14 @@
 .time {
     margin: 30px;
 }
+
+#weatherTitle {
+    color: #095256;
+    margin: 20px;
+    font-weight: 700;
+}
+
+.weatherCard {
+    background-color: #93b082;
+}
+

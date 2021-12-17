@@ -20,31 +20,34 @@ var getWeatherData = function() {
 
 var displayWeatherData = function(weatherData) {
     console.log(weatherData);
-    // var weatherWrapper = document.getElementById("weatherWrapper")
-    // weatherWrapper.innerHTML = "";
+    var weatherWrapper = document.getElementById("weatherWrapper")
+    
+    var cardContainer = document.createElement("div");
+    cardContainer.className = "level";
 
-    // var cardContainer = document.createElement("div");
-    // cardContainer.className = "row d-flex justify-content-around";
+    var leftJustifiedCardWrapper = document.createElement("div");
+    leftJustifiedCardWrapper.className = "level-left"
 
-    // container.appendChild(cardContainer);
+    cardContainer.appendChild(leftJustifiedCardWrapper);
+    weatherWrapper.appendChild(cardContainer);
 
-    for (i=1; i<4; i++) {
+    for (i=0; i<3; i++) {
         var card = singleWeatherCard(weatherData.daily[i]);
-        weatherWrapper.appendChild(card);
+        leftJustifiedCardWrapper.appendChild(card);
     }
 }
 
 var singleWeatherCard = function (weatherData) {
     console.log(weatherData)
     var card = document.createElement("div");
-    card.className = "card text-center bg-dark text-white";
+    card.className = "card level-item";
 
-    var cardBody = document.createElement("div");
-    cardBody.className = "card-body";
+    var cardContent = document.createElement("div");
+    cardContent.className = "card-content weatherCard";
 
     var date = document.createElement("h4");
     date.innerHTML = moment.unix(weatherData.dt).format("MM/DD/YYYY");
-    date.className = "card-title";
+    date.className = "card-header-title";
 
     var icon = document.createElement("img");
     icon.src = weatherIconURL(weatherData.weather[0].icon);
@@ -59,13 +62,13 @@ var singleWeatherCard = function (weatherData) {
     var humidity = document.createElement("h6");
     humidity.innerHTML = `Humidity: ${weatherData.humidity}%`;
 
-    cardBody.appendChild(date);
-    cardBody.appendChild(icon);
-    cardBody.appendChild(temp);
-    cardBody.appendChild(wind);
-    cardBody.appendChild(humidity);
+    cardContent.appendChild(date);
+    cardContent.appendChild(icon);
+    cardContent.appendChild(temp);
+    cardContent.appendChild(wind);
+    cardContent.appendChild(humidity);
 
-    card.appendChild(cardBody);
+    card.appendChild(cardContent);
 
     return card;
 }
