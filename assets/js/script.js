@@ -7,7 +7,7 @@
     hourEl.setAttribute("class", "is-size-2")
     localTime.append(hourEl);
     var dateEl = document.createElement("li")
-    dateEl.textContent = moment().format("dddd, MMM do, YYYY"); 
+    dateEl.textContent = moment().format("dddd, MMM Do, YYYY"); 
     localTime.append(dateEl);  
 }
 
