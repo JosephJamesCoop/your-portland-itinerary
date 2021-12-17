@@ -1,5 +1,5 @@
-// fetch call to obtain local attractions, data is logged to the console
-fetch("https://travel-advisor.p.rapidapi.com/attractions/list?location_id=" + locationId + "&currency=USD&lang=en_US&lunit=km&sort=recommended", {
+// fetch call to obtain local restaurants, data is logged to the console
+fetch("https://travel-advisor.p.rapidapi.com/restaurants/list?location_id="+locationId+"&currency=USD&lunit=km&limit=30&lang=en_US", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "travel-advisor.p.rapidapi.com",
