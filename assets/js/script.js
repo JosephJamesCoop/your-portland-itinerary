@@ -1,4 +1,5 @@
 const placesContainerEl = document.querySelector("#listOfAttractions");
+const restaurantsContainerEl = document.querySelector("#listOfRestaurants");
 
 // location id for Portland, Oregon required for making calls to the travel advisor api;
 const locationId = 52024;
