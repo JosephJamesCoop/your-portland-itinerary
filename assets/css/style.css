@@ -1,3 +1,19 @@
 .time {
     margin: 30px;
 }
+
+#weatherTitle {
+    color: #095256;
+    margin: 20px;
+    font-weight: 700;
+}
+
+.weatherCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer {
+    margin: 30px;
+}
+

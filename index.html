@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Your Portland Itinerary</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -27,9 +27,10 @@
         <!--This will hold the Time, Weather and News-->
         <div>
             <!--Weather and Time-->
-            <div class = "columns">
-                <!--News-->
-                <div id="weatherWrapper" class="column"></div>
+            <div class="columns">
+                <div id="weatherWrapper" class="column ">
+                    <h2 id="weatherTitle">Portland's 3-day Forecast</h2>
+                </div>
                 <div id="timeWrapper" class="column is-one-quarter has-text-centered">
                     <div class="time is-one-quarter card has-background-light has-text-dark">
                         <p class="card-header-title is-centered">Portland Time</p>
@@ -318,7 +319,7 @@
     </main>
 
     <footer>
-<!--We havve not discussed anything here yet.-->
+<!--We have not discussed anything here yet.-->
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
