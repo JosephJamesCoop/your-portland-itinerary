@@ -1,3 +1,4 @@
+
 // the filter id for coffee shops
 const coffeeId = 9900;
 

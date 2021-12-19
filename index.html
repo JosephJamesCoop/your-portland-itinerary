@@ -43,10 +43,24 @@
             </div>
         </div>
         <!--This will hold the users itinerary-->
-        <div>
-            <ul>
-                <!--We will append the li which will be each day-->
-            </ul>
+        <div class="margin">
+          <h1>
+            Itinerary
+          </h1>
+          <div>
+            <button onclick="document.getElementById('date-picker').style.display='block'"> Select Travel Dates</button>
+            <button onclick="document.getElementById('date-picker').style.display='block'">Change Travel Dates</button>
+          </div>
+          <div>
+            <div id="list-date">
+              <!-- this is to test the css classes. Will be deleted once testing is done. -->
+              <div class="card">
+                <h4 class="card-header bg-dark text-light">day 1</h4>
+                <ul class="list-group list-group-flush ui-sortable"></ul>
+              </div>
+              <!-- You will be deleting between teh first and this comment. -->
+            </div>
+          </div>
         </div>
 
         <!--This will hold our events section-->
@@ -67,7 +81,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=eventTwo>
                         <div>
                             <h2>"Title of Event"</h2>
@@ -80,7 +93,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=eventThree>
                         <div>
                             <h2>"Title of Event"</h2>
@@ -93,7 +105,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=eventFour>
                         <div>
                             <h2>"Title of Event"</h2>
@@ -106,7 +117,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -132,7 +142,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=restaurantTwo>
                         <div>
                             <h2>"Title of Restaurant"</h2>
@@ -146,7 +155,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=restaurantThree>
                         <div>
                             <h2>"Title of Restaurant"</h2>
@@ -160,7 +168,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=restaurantFour>
                         <div>
                             <h2>"Title of Restaurant"</h2>
@@ -174,7 +181,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -200,7 +206,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=barTwo>
                         <div>
                             <h2>"Title of Bar"</h2>
@@ -214,7 +219,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=barThree>
                         <div>
                             <h2>"Title of Bar"</h2>
@@ -228,7 +232,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=barFour>
                         <div>
                             <h2>"Title of Bar"</h2>
@@ -242,7 +245,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -268,7 +270,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=coffeeTwo>
                         <div>
                             <h2>"Title of Coffee Shop"</h2>
@@ -282,7 +283,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=coffeeThree>
                         <div>
                             <h2>"Title of Coffee Shop"</h2>
@@ -296,7 +296,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=coffeeFour>
                         <div>
                             <h2>"Title of Coffee Shop"</h2>
@@ -310,7 +309,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -322,7 +320,8 @@
     <footer>
 <!--We havve not discussed anything here yet.-->
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/weather.js"></script>
@@ -331,6 +330,8 @@
     <script src="./assets/js/get-bars.js"></script>
     <script src="./assets/js/get-coffee.js"></script>
     <script src="./assets/js/card.js"></script>
+    <script src="./assets/js/itinerary.js"></script>
+
 </body>
 
 </html>
