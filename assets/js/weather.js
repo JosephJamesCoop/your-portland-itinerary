@@ -53,7 +53,7 @@ var singleWeatherCard = function (weatherData) {
 
     var date = document.createElement("h4");
     date.innerHTML = moment.unix(weatherData.dt).format("MM/DD/YYYY");
-    date.className = "card-header-title";
+    date.className = "title is-4";
 
     var icon = document.createElement("img");
     icon.src = weatherIconURL(weatherData.weather[0].icon);

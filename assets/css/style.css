@@ -5,9 +5,7 @@
 }
 
 #weatherTitle {
-    color: #095256;
     margin: 20px;
-    font-weight: 700;
 }
 
 .weatherCard {
@@ -28,3 +26,8 @@
     margin: 30px;
 }
 
+.weather {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
