@@ -1,6 +1,6 @@
 
 var saveDates = function () {
-    console.log(dates)
+    dates = dates + 1;
     localStorage.setItem("dates", JSON.stringify(dates));
   };
   
@@ -18,9 +18,10 @@ var saveDates = function () {
     var monthEnd = departureDate.split("/")[0];
     var dayStart = arrivalDate.split("/")[1];
     var dayEnd = departureDate.split("/")[1];
-  
+  console.log(dayStart);
+
     if (monthStart === monthEnd) {
-      var c = 1 + (dayEnd - dayStart) + 1;
+      var c = 1 + (dayEnd - dayStart);
     } else if (monthStart === 01) {
       var a = 31 - monthStart;
       var b = 28 - monthEnd;
@@ -70,6 +71,8 @@ var saveDates = function () {
       var b = 30 - monthEnd;
       var c = a + b + 1;
     }
+    
+    
   
      dates = c
   
@@ -93,16 +96,15 @@ var saveDates = function () {
   
   var loadDates = function () {
     dates = JSON.parse(localStorage.getItem("dates"));
-  var dateLength = 1 + dates;
-    for (let i = 0; i < dateLength; i++) {
+    for (let i = 0; i < dates; i++) {
       var portlandDates = 1 + i;
       console.log(portlandDates)
   
       var dateBox = $("<div>").addClass("card");
   
-      var dateNumber = $("<h4>").addClass("card-header bg-dark text-light").text("day  " + portlandDates);
+      var dateNumber = $("<h4>").addClass("").text("day  " + portlandDates);
   
-      var taskP = $("<ul>").addClass("list-group list-group-flush ui-sortable").text("");
+      var taskP = $("<ul>").addClass("").text("");
   
       // append span and p element to parent li
       dateBox.append(dateNumber, taskP);
@@ -148,3 +150,38 @@ var saveDates = function () {
   // load tasks for the first time
   loadDates();
   
+
+  $(".new-event").click(function () {
+    var arrivalDate = $("#dateSelected").val();
+    var departureDate = $("#modalDueDate").val();
+    var a = arrivalDate.split("/")[1];
+    var b = departureDate.split("/")[1];
+    var c = b - a
+  
+    for (let i = 0; i < c; i++) {
+      var portlandDates = 1 + i;
+      console.log(portlandDates)
+  
+      var dateBox = $("<div>").addClass("card");
+  
+      var dateNumber = $("<h4>").addClass("card-header bg-dark text-light").text("day  " + portlandDates);
+  
+      var taskP = $("<ul>").addClass("list-group list-group-flush ui-sortable").text("");
+  
+      // append span and p element to parent li
+      dateBox.append(dateNumber, taskP);
+  
+      // append to ul list on the page
+      $("#list-date").append(dateBox);
+  
+      dates = c
+  
+      saveDates();
+    };
+  });
+
+
+
+
+
+

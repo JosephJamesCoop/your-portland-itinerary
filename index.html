@@ -2,73 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your Portland Itinerary</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Portland Itinerary</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 </head>
 
 <body>
-    <!-- style navbar with red background -->
-    <header class="navbar is-danger">
-        <!-- center navbar elements -->
-        <ul class="navbar-start navbar-end">
-            <a href="#attractions" class="navbar-item">Attractions</a>
-            <a href="#restaurants" class="navbar-item">Restaurants</a>
-            <li class="navbar-item title mb-0">Your Portland Itinerary</li>
-            <a href="#bars" class="navbar-item">Bars</a>
-            <a href="#coffee-shops" class="navbar-item">Coffee Shops</a>
-        </ul>
-    </header>
+  <!-- style navbar with red background -->
+  <header class="navbar is-danger">
+    <!-- center navbar elements -->
+    <ul class="navbar-start navbar-end">
+      <a href="#attractions" class="navbar-item">Attractions</a>
+      <a href="#restaurants" class="navbar-item">Restaurants</a>
+      <li class="navbar-item title mb-0">Your Portland Itinerary</li>
+      <a href="#bars" class="navbar-item">Bars</a>
+      <a href="#coffee-shops" class="navbar-item">Coffee Shops</a>
+    </ul>
+  </header>
 
-    <main>
-        <!--This will hold the Time, Weather and News-->
-        <div>
-            <!--Weather and Time-->
-            <div class = "columns">
-                <!--News-->
-                <div id="weatherWrapper" class="column"></div>
-                <div id="timeWrapper" class="column is-one-quarter has-text-centered">
-                    <div class="time is-one-quarter card has-background-light has-text-dark">
-                        <p class="card-header-title is-centered">Portland Time</p>
-                    
-                        <ul id=localTime class="momentTime card-content"></ul>
-                    
+  <main>
+    <!--This will hold the Time, Weather and News-->
+    <div>
+      <!--Weather and Time-->
+      <div class="columns">
+        <!--News-->
+        <div id="weatherWrapper" class="column"></div>
+        <div id="timeWrapper" class="column is-one-quarter has-text-centered">
+          <div class="time is-one-quarter card has-background-light has-text-dark">
+            <p class="card-header-title is-centered">Portland Time</p>
 
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--This will hold the users itinerary-->
-        <div class="margin">
-          <h1>
-            Itinerary
-          </h1>
-          <div>
-            <button onclick="document.getElementById('date-picker').style.display='block'"> Select Travel Dates</button>
-            <button onclick="document.getElementById('date-picker').style.display='block'">Change Travel Dates</button>
-          </div>
-          <div>
-            <div id="list-date">
-              <!-- this is to test the css classes. Will be deleted once testing is done. -->
-              <div class="card">
-                <h4 class="card-header bg-dark text-light">day 1</h4>
-                <ul class="list-group list-group-flush ui-sortable"></ul>
-              </div>
-              <!-- You will be deleting between teh first and this comment. -->
-            </div>
+            <ul id=localTime class="momentTime card-content"></ul>
+
+
+
           </div>
         </div>
+      </div>
+    </div>
+    <!--This will hold the users itinerary-->
+    <div class="margin">
+      <h1>
+        Itinerary
+      </h1>
+      <div>
+        <button onclick="document.getElementById('date-picker').style.display='block'"> Select Travel Dates</button>
+        <button onclick="document.getElementById('date-picker').style.display='block'">Change Travel Dates</button>
+      </div>
+      <div>
+        <div id="list-date">
+          <!-- this is to test the css classes. Will be deleted once testing is done. -->
+          <div class="card">
+            <h4 class="card-header bg-dark text-light">day 1</h4>
+            <ul class="list-group list-group-flush ui-sortable"></ul>
+          </div>
+          <!-- You will be deleting between teh first and this comment. -->
+        </div>
+      </div>
+    </div>
 
-        <!--This will hold our events section-->
-        <div id="attractions" class="section">
-            <h1 class="title">Attractions</h1>
-            <div>
-                <div id="listOfAttractions" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-                    <!-- A lot of the commented section will be done in JS
+    <!--This will hold our events section-->
+    <div id="attractions" class="section">
+      <h1 class="title">Attractions</h1>
+      <div>
+        <div id="listOfAttractions" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
+          <!-- A lot of the commented section will be done in JS
                     <div id=eventOne>
                         <div>
                             <h2>"Title of Event"</h2>
@@ -119,16 +119,16 @@
                     </div>
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
 
-        <!--This will hold our Restaurants section -->
-        <div id="restaurants" class="section">
-            <h1 class="title">Restaurants</h1>
-            <div>
-                <div id="listOfRestaurants" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-                    <!-- A lot of the commented section will be done in JS
+    <!--This will hold our Restaurants section -->
+    <div id="restaurants" class="section">
+      <h1 class="title">Restaurants</h1>
+      <div>
+        <div id="listOfRestaurants" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
+          <!-- A lot of the commented section will be done in JS
                     <div id=restaurantOne>
                         <div>
                             <h2>"Title of Restaurant"</h2>
@@ -183,16 +183,16 @@
                     </div>
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
 
-        <!--This will hold our Bars section-->
-        <div id="bars" class="section">
-            <h1 class="title">Bars</h1>
-            <div>
-                <div id="listOfBars">
-                    <!-- A lot of the commented section will be done in JS
+    <!--This will hold our Bars section-->
+    <div id="bars" class="section">
+      <h1 class="title">Bars</h1>
+      <div>
+        <div id="listOfBars">
+          <!-- A lot of the commented section will be done in JS
                     <div id=barOne>
                         <div>
                             <h2>"Title of Bar"</h2>
@@ -247,16 +247,16 @@
                     </div>
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
 
-        <!--This will hold our Coffee section-->
-        <div id="coffee-shops" class="section">
-            <h1 class="title">Coffee Shops</h1>
-            <div>
-                <div id="listOfCoffee">
-                    <!-- A lot of the commented section will be done in JS
+    <!--This will hold our Coffee section-->
+    <div id="coffee-shops" class="section">
+      <h1 class="title">Coffee Shops</h1>
+      <div>
+        <div id="listOfCoffee">
+          <!-- A lot of the commented section will be done in JS
                     <div id=coffeeOne>
                         <div>
                             <h2>"Title of Coffee Shop"</h2>
@@ -311,26 +311,77 @@
                     </div>
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer>
-<!--We havve not discussed anything here yet.-->
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/weather.js"></script>
-    <script src="./assets/js/get-places.js"></script>
-    <script src="./assets/js/get-restaurants.js"></script>
-    <script src="./assets/js/get-bars.js"></script>
-    <script src="./assets/js/get-coffee.js"></script>
-    <script src="./assets/js/card.js"></script>
-    <script src="./assets/js/itinerary.js"></script>
+  <footer>
+    <div class="modal new-event new-date-picker" id="date-picker">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Travel Dates</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="form-group">
+            <label for="modalArrivalDate">Arrival Date</label>
+            <input type="text" id="modalArrivalDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label for="modalDueDate">Departure Date</label>
+            <input type="text" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button type="button" onclick="document.getElementById('date-picker').style.display='none'">Close</button>
+          <button type="button" onclick="document.getElementById('date-picker').style.display='none'">Save
+            Dates</button>
+        </footer>
+      </div>
+    </div>
+
+    <div class="modal new-event new-date-picker" id="date-picker">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">When would you like to do this?</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="form-group">
+            <label for="modalArrivalDate">What Date?</label>
+            <input type="text" id="modalArrivalDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label for="modalTtimeSelection">What time?</label>
+            <textarea id="modalTtimeSelection" rows="3" class=""></textarea>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button type="button" onclick="document.getElementById('date-picker').style.display='none'">Close</button>
+          <button type="button" onclick="document.getElementById('date-picker').style.display='none'">Save
+            Dates</button>
+        </footer>
+      </div>
+    </div>
+
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/weather.js"></script>
+  <script src="./assets/js/get-places.js"></script>
+  <script src="./assets/js/get-restaurants.js"></script>
+  <script src="./assets/js/get-bars.js"></script>
+  <script src="./assets/js/get-coffee.js"></script>
+  <script src="./assets/js/card.js"></script>
+  <script src="./assets/js/itinerary.js"></script>
 
 </body>
 
