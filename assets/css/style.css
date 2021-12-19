@@ -1,5 +1,7 @@
 .time {
     margin: 30px;
+    height: 90%;
+    width: 90%;
 }
 
 #weatherTitle {
