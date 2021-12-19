@@ -38,12 +38,18 @@ var displayWeatherData = function(weatherData) {
 }
 
 var singleWeatherCard = function (weatherData) {
-    console.log(weatherData)
+    console.log(weatherData);
     var card = document.createElement("div");
     card.className = "card level-item";
 
     var cardContent = document.createElement("div");
     cardContent.className = "card-content weatherCard";
+
+    var iconAndWeather = document.createElement("div");
+    iconAndWeather.className = "iconAndWeather";
+
+    var weather = document.createElement("div");
+    weather.className = "weather";
 
     var date = document.createElement("h4");
     date.innerHTML = moment.unix(weatherData.dt).format("MM/DD/YYYY");
@@ -63,10 +69,14 @@ var singleWeatherCard = function (weatherData) {
     humidity.innerHTML = `Humidity: ${weatherData.humidity}%`;
 
     cardContent.appendChild(date);
-    cardContent.appendChild(icon);
-    cardContent.appendChild(temp);
-    cardContent.appendChild(wind);
-    cardContent.appendChild(humidity);
+    cardContent.appendChild(iconAndWeather);
+
+    iconAndWeather.appendChild(icon);
+    iconAndWeather.appendChild(weather);
+
+    weather.appendChild(temp);
+    weather.appendChild(wind);
+    weather.appendChild(humidity);
 
     card.appendChild(cardContent);
 

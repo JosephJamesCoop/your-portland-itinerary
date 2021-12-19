@@ -13,6 +13,15 @@
     flex-direction: column;
 }
 
+.weatherCard h4 {
+    display: inline;
+    text-align: center;
+}
+
+.iconAndWeather {
+    display: flex;
+}
+
 .cardContainer {
     margin: 30px;
 }
