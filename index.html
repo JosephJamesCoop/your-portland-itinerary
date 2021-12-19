@@ -15,7 +15,7 @@
     <header class="navbar is-danger">
         <!-- center navbar elements -->
         <ul class="navbar-start navbar-end">
-            <a href="#shopping" class="navbar-item">Shopping</a>
+            <a href="#attractions" class="navbar-item">Attractions</a>
             <a href="#restaurants" class="navbar-item">Restaurants</a>
             <li class="navbar-item title mb-0">Your Portland Itinerary</li>
             <a href="#bars" class="navbar-item">Bars</a>
@@ -44,17 +44,31 @@
             </div>
         </div>
         <!--This will hold the users itinerary-->
-        <div>
-            <ul>
-                <!--We will append the li which will be each day-->
-            </ul>
+        <div class="margin">
+          <h1>
+            Itinerary
+          </h1>
+          <div>
+            <button onclick="document.getElementById('date-picker').style.display='block'"> Select Travel Dates</button>
+            <button onclick="document.getElementById('date-picker').style.display='block'">Change Travel Dates</button>
+          </div>
+          <div>
+            <div id="list-date">
+              <!-- this is to test the css classes. Will be deleted once testing is done. -->
+              <div class="card">
+                <h4 class="card-header bg-dark text-light">day 1</h4>
+                <ul class="list-group list-group-flush ui-sortable"></ul>
+              </div>
+              <!-- You will be deleting between teh first and this comment. -->
+            </div>
+          </div>
         </div>
 
         <!--This will hold our events section-->
-        <div id="shopping" class="section">
-            <h1 class="title">Shopping</h1>
+        <div id="attractions" class="section">
+            <h1 class="title">Attractions</h1>
             <div>
-                <div id="listOfEvents">
+                <div id="listOfAttractions" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
                     <!-- A lot of the commented section will be done in JS
                     <div id=eventOne>
                         <div>
@@ -68,7 +82,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=eventTwo>
                         <div>
                             <h2>"Title of Event"</h2>
@@ -81,7 +94,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=eventThree>
                         <div>
                             <h2>"Title of Event"</h2>
@@ -94,7 +106,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=eventFour>
                         <div>
                             <h2>"Title of Event"</h2>
@@ -107,7 +118,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -118,7 +128,7 @@
         <div id="restaurants" class="section">
             <h1 class="title">Restaurants</h1>
             <div>
-                <div id="listOfRestaurant">
+                <div id="listOfRestaurants" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
                     <!-- A lot of the commented section will be done in JS
                     <div id=restaurantOne>
                         <div>
@@ -133,7 +143,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=restaurantTwo>
                         <div>
                             <h2>"Title of Restaurant"</h2>
@@ -147,7 +156,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=restaurantThree>
                         <div>
                             <h2>"Title of Restaurant"</h2>
@@ -161,7 +169,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=restaurantFour>
                         <div>
                             <h2>"Title of Restaurant"</h2>
@@ -175,7 +182,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -186,7 +192,7 @@
         <div id="bars" class="section">
             <h1 class="title">Bars</h1>
             <div>
-                <div id="listOfBars">
+                <div id="listOfBars" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
                     <!-- A lot of the commented section will be done in JS
                     <div id=barOne>
                         <div>
@@ -201,7 +207,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=barTwo>
                         <div>
                             <h2>"Title of Bar"</h2>
@@ -215,7 +220,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=barThree>
                         <div>
                             <h2>"Title of Bar"</h2>
@@ -229,7 +233,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=barFour>
                         <div>
                             <h2>"Title of Bar"</h2>
@@ -243,7 +246,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -254,7 +256,7 @@
         <div id="coffee-shops" class="section">
             <h1 class="title">Coffee Shops</h1>
             <div>
-                <div id="listOfCoffee">
+                <div id="listOfCoffee" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
                     <!-- A lot of the commented section will be done in JS
                     <div id=coffeeOne>
                         <div>
@@ -269,7 +271,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=coffeeTwo>
                         <div>
                             <h2>"Title of Coffee Shop"</h2>
@@ -283,7 +284,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=coffeeThree>
                         <div>
                             <h2>"Title of Coffee Shop"</h2>
@@ -297,7 +297,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
                     <div id=coffeeFour>
                         <div>
                             <h2>"Title of Coffee Shop"</h2>
@@ -311,7 +310,6 @@
                             <li>Time</li>
                             <li>Add</li>
                     </div>
-
             "Most likely all of this commented out will be done in JS just providing a visual of the flow"
                     -->
                 </div>
@@ -323,10 +321,18 @@
     <footer>
 <!--We have not discussed anything here yet.-->
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/weather.js"></script>
+    <script src="./assets/js/get-places.js"></script>
+    <script src="./assets/js/get-restaurants.js"></script>
+    <script src="./assets/js/get-bars.js"></script>
+    <script src="./assets/js/get-coffee.js"></script>
+    <script src="./assets/js/card.js"></script>
+    <script src="./assets/js/itinerary.js"></script>
+
 </body>
 
 </html>
