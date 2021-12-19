@@ -23,7 +23,7 @@ var displayWeatherData = function(weatherData) {
     var weatherWrapper = document.getElementById("weatherWrapper")
     
     var cardContainer = document.createElement("div");
-    cardContainer.className = "level";
+    cardContainer.className = "level cardContainer";
 
     var leftJustifiedCardWrapper = document.createElement("div");
     leftJustifiedCardWrapper.className = "level-left"
@@ -75,7 +75,7 @@ var singleWeatherCard = function (weatherData) {
 
 var weatherIconURL = function(iconCode) {
     // http://openweathermap.org/img/wn/01d.png
-    return `http://openweathermap.org/img/wn/${iconCode}.png`;
+    return `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
 
 var getTempAverage = function(temp) {

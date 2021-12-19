@@ -9,6 +9,11 @@
 }
 
 .weatherCard {
-    background-color: #93b082;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer {
+    margin: 30px;
 }
 
