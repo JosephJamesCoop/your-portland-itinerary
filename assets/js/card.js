@@ -27,11 +27,18 @@ const createCards = (fetchResponse, container) => {
             card.setAttribute("class", "card");
             card.setAttribute("style", "flex: 3 0 30%; margin: 15px;")
             // style and add necessary data using innerHTML
-            card.innerHTML = '<div class="card-image" style="background-image: url(' + fetchResponse.data[i].photo.images.original.url
+            card.innerHTML = '<div class="card-image" style="background-image: url(' 
+                            + fetchResponse.data[i].photo.images.original.url
                             + '); background-size: cover; height: 300px; position: relative;"></div><div class="is-flex"><p class="card-header-title">' 
-                            + fetchResponse.data[i].name + '</p><button style="margin: 12px 16px;" class="button is-primary">Add</button></div>' 
+                            + fetchResponse.data[i].name 
+                            + '</p><button style="margin: 12px 16px; margin-right: 0px;" class="button is-primary">Add</button>' 
+                            + '<a href="https://www.google.com.sa/maps/place/' 
+                            + fetchResponse.data[i].address_obj.street1 + ', ' + fetchResponse.data[i].address_obj.city + ', '
+                            + fetchResponse.data[i].address_obj.state
+                            + '" target="_blank"><button style="margin: 12px 16px;" class="button is-info">Map</button></a></div>' 
                             + openText + '<p class="card-content">' 
-                            + fetchResponse.data[i].description + '</p>';
+                            + fetchResponse.data[i].description 
+                            + '</p>';
             // append to the container passed through our function
             container.appendChild(card);
         }
