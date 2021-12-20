@@ -23,31 +23,33 @@ var displayWeatherData = function(weatherData) {
     var weatherWrapper = document.getElementById("weatherWrapper")
     
     var cardContainer = document.createElement("div");
-    cardContainer.className = "level cardContainer";
+    cardContainer.className = "cardContainer";
 
-    var leftJustifiedCardWrapper = document.createElement("div");
-    leftJustifiedCardWrapper.className = "level-left"
-
-    cardContainer.appendChild(leftJustifiedCardWrapper);
     weatherWrapper.appendChild(cardContainer);
 
     for (i=0; i<3; i++) {
         var card = singleWeatherCard(weatherData.daily[i]);
-        leftJustifiedCardWrapper.appendChild(card);
+        cardContainer.appendChild(card);
     }
 }
 
 var singleWeatherCard = function (weatherData) {
-    console.log(weatherData)
+    console.log(weatherData);
     var card = document.createElement("div");
-    card.className = "card level-item";
+    card.className = "card weatherCard";
 
     var cardContent = document.createElement("div");
-    cardContent.className = "card-content weatherCard";
+    cardContent.className = "card-content weatherCardContent";
+
+    var iconAndWeather = document.createElement("div");
+    iconAndWeather.className = "iconAndWeather";
+
+    var weather = document.createElement("div");
+    weather.className = "weather";
 
     var date = document.createElement("h4");
     date.innerHTML = moment.unix(weatherData.dt).format("MM/DD/YYYY");
-    date.className = "card-header-title";
+    date.className = "title is-4";
 
     var icon = document.createElement("img");
     icon.src = weatherIconURL(weatherData.weather[0].icon);
@@ -63,10 +65,14 @@ var singleWeatherCard = function (weatherData) {
     humidity.innerHTML = `Humidity: ${weatherData.humidity}%`;
 
     cardContent.appendChild(date);
-    cardContent.appendChild(icon);
-    cardContent.appendChild(temp);
-    cardContent.appendChild(wind);
-    cardContent.appendChild(humidity);
+    cardContent.appendChild(iconAndWeather);
+
+    iconAndWeather.appendChild(icon);
+    iconAndWeather.appendChild(weather);
+
+    weather.appendChild(temp);
+    weather.appendChild(wind);
+    weather.appendChild(humidity);
 
     card.appendChild(cardContent);
 
