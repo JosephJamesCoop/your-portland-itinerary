@@ -1,8 +1,9 @@
 // function to create cards; accepts the a response from a fetch request and also requires a container to append said information
-const createCards = (fetchResponse, container) => {
+const createCards = (fetchResponse, container, type) => {
     console.log(fetchResponse);
     // iterate through the info we have
     var max = 6;
+    var index = 1;
     for (var i = 0; i < max; i++) {
         // some places do not include photos, if there is no photo, simply skip it without creating a card
         if (!fetchResponse.data[i].photo) {
@@ -25,6 +26,7 @@ const createCards = (fetchResponse, container) => {
             } else { openText = ""; }
 
             card.setAttribute("class", "card");
+            card.setAttribute("id", type + "-" + index);
             card.setAttribute("style", "flex: 3 0 30%; margin: 15px;")
             // style and add necessary data using innerHTML
             card.innerHTML = '<div class="card-image" style="background-image: url(' 
@@ -41,6 +43,7 @@ const createCards = (fetchResponse, container) => {
                             + '</p>';
             // append to the container passed through our function
             container.appendChild(card);
+            index++;
         }
     }
 }
