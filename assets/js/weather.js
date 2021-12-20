@@ -23,24 +23,20 @@ var displayWeatherData = function(weatherData) {
     var weatherWrapper = document.getElementById("weatherWrapper")
     
     var cardContainer = document.createElement("div");
-    cardContainer.className = "level cardContainer";
+    cardContainer.className = "cardContainer";
 
-    var leftJustifiedCardWrapper = document.createElement("div");
-    leftJustifiedCardWrapper.className = "level-left"
-
-    cardContainer.appendChild(leftJustifiedCardWrapper);
     weatherWrapper.appendChild(cardContainer);
 
     for (i=0; i<3; i++) {
         var card = singleWeatherCard(weatherData.daily[i]);
-        leftJustifiedCardWrapper.appendChild(card);
+        cardContainer.appendChild(card);
     }
 }
 
 var singleWeatherCard = function (weatherData) {
     console.log(weatherData);
     var card = document.createElement("div");
-    card.className = "card level-item";
+    card.className = "card";
 
     var cardContent = document.createElement("div");
     cardContent.className = "card-content weatherCard";

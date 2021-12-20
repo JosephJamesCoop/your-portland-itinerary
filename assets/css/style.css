@@ -1,7 +1,10 @@
+#localTime {
+    padding: 0;
+}
+
 .time {
     margin: 30px;
     height: 90%;
-    width: 90%;
 }
 
 #weatherTitle {
@@ -11,6 +14,7 @@
 .weatherCard {
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 .weatherCard h4 {
@@ -23,7 +27,9 @@
 }
 
 .cardContainer {
-    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .weather {
