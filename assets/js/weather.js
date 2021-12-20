@@ -36,10 +36,10 @@ var displayWeatherData = function(weatherData) {
 var singleWeatherCard = function (weatherData) {
     console.log(weatherData);
     var card = document.createElement("div");
-    card.className = "card";
+    card.className = "card weatherCard";
 
     var cardContent = document.createElement("div");
-    cardContent.className = "card-content weatherCard";
+    cardContent.className = "card-content weatherCardContent";
 
     var iconAndWeather = document.createElement("div");
     iconAndWeather.className = "iconAndWeather";

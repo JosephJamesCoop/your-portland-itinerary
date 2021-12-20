@@ -29,7 +29,7 @@ const createCards = (fetchResponse, container) => {
             // style and add necessary data using innerHTML
             card.innerHTML = '<div class="card-image" style="background-image: url(' 
                             + fetchResponse.data[i].photo.images.original.url
-                            + '); background-size: cover; height: 300px; position: relative;"></div><div class="is-flex"><p class="card-header-title">' 
+                            + '); background-size: cover; height: 300px; position: relative; padding-bottom: 20%;"></div><div class="is-flex"><p class="card-header-title">' 
                             + fetchResponse.data[i].name 
                             + '</p><button style="margin: 12px 16px; margin-right: 0px;" class="button is-primary">Add</button>' 
                             + '<a href="https://www.google.com.sa/maps/place/' 
