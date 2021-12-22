@@ -189,11 +189,11 @@ var updateDay = function(day, activity) {
 var renderDates = function(dates) {
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
-    dateCard.setAttribute("class", "card");
+    dateCard.setAttribute("class", "card itinerary-box");
     dateCard.setAttribute("style", "flex: 1 1 0")
     dateCard.setAttribute("id", "card-" + (i + 1));
 
-    dateCard.innerHTML = '<h4 class="card-header-title">Day ' + (i + 1) 
+    dateCard.innerHTML = '<h4 class="card-header-title itinerary-head">Day ' + (i + 1) 
                         + '</h4><ul id="theDate" class="card-content event-options">' + loadDay(i + 1);
                         + '</ul>';
 

@@ -28,9 +28,7 @@
       <!--Weather and Time-->
       <div class="container">
         <div class="columns">
-          <div id="weatherWrapper" class="column">
-            <h1 class="title" id="weatherTitle">Portland's 3-day Forecast</h1>
-          </div>
+          
           <div id="timeWrapper" class="column is-one-quarter has-text-centered">
             <div class="time is-one-quarter card has-text-light">
               <div class="card-content">
@@ -40,18 +38,21 @@
               </div>
             </div>
           </div>
+          <div id="weatherWrapper" class="column">
+            <h1 class="title" id="weatherTitle">Portland's 3-day Forecast</h1>
+          </div>
         </div>
       </div>
     </section>
     <!--This will hold the users itinerary-->
-<section>
+<section class="body">
             <div class="section container">
                 <div class="margin">
-                    <h1 class="title">
+                    <h1 class="title white-text">
                         Itinerary
                     </h1>
                     <div style="display: inline-flex; align-items: center;">
-                      <h2>Days Selection: </h2>
+                      <h2 class="white-text">Days Selection: </h2>
                       <div class="select">
                         <select id="selection-el">
 
@@ -60,8 +61,7 @@
                     </div>
                     <div>
                         <div class="cardContainer" id="list-date">
-                            <!-- this is to test the css classes. Will be deleted once testing is done. -->
-                            <!-- You will be deleting between teh first and this comment. -->
+                         
                         </div>
                     </div>
                 </div>
@@ -71,254 +71,45 @@
 
     <!--This will hold our events section-->
     <section>
-      <div class="container">
+      
+      
+        <div class="attractions-container">
         <div id="attractions" class="section">
-          <h1 class="title">Attractions</h1>
+          <h1 class="title white-text">Attractions</h1>
           <div>
             <div id="listOfAttractions" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-              <!-- A lot of the commented section will be done in JS
-                            <div id=eventOne>
-                                <div>
-                                    <h2>"Title of Event"</h2>
-                                </div>
-                                <div>
-                                    "link for event image"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=eventTwo>
-                                <div>
-                                    <h2>"Title of Event"</h2>
-                                </div>
-                                <div>
-                                    "link for event image"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=eventThree>
-                                <div>
-                                    <h2>"Title of Event"</h2>
-                                </div>
-                                <div>
-                                    "link for event image"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=eventFour>
-                                <div>
-                                    <h2>"Title of Event"</h2>
-                                </div>
-                                <div>
-                                    "link for event image"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                    "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                            -->
+             
             </div>
           </div>
         </div>
-
+      
         <!--This will hold our Restaurants section -->
+        <div class="restaurants-container">
         <div id="restaurants" class="section">
-          <h1 class="title">Restaurants</h1>
+          <h1 class="title white-text">Restaurants</h1>
           <div>
             <div id="listOfRestaurants" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-              <!-- A lot of the commented section will be done in JS
-                            <div id=restaurantOne>
-                                <div>
-                                    <h2>"Title of Restaurant"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Restaurant"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=restaurantTwo>
-                                <div>
-                                    <h2>"Title of Restaurant"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Restaurant"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=restaurantThree>
-                                <div>
-                                    <h2>"Title of Restaurant"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Restaurant"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=restaurantFour>
-                                <div>
-                                    <h2>"Title of Restaurant"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Restaurant"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                    "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                            -->
+            </div>
             </div>
           </div>
         </div>
 
         <!--This will hold our Bars section-->
-        <div id="bars" class="section">
-          <h1 class="title">Bars</h1>
+        <div id="bars" class="section bars-container">
+          <h1 class="title white-text">Bars</h1>
           <div>
             <div id="listOfBars" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-              <!-- A lot of the commented section will be done in JS
-                            <div id=barOne>
-                                <div>
-                                    <h2>"Title of Bar"</h2>
-                                </div>
-                                <div>
-                                    "link for image of bar"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=barTwo>
-                                <div>
-                                    <h2>"Title of Bar"</h2>
-                                </div>
-                                <div>
-                                    "link for image of bar"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=barThree>
-                                <div>
-                                    <h2>"Title of Bar"</h2>
-                                </div>
-                                <div>
-                                    "link for image of bar"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=barFour>
-                                <div>
-                                    <h2>"Title of Bar"</h2>
-                                </div>
-                                <div>
-                                    "link for image of bar"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                    "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                            -->
+           
             </div>
           </div>
         </div>
 
         <!--This will hold our Coffee section-->
-        <div id="coffee-shops" class="section">
-          <h1 class="title">Coffee Shops</h1>
+        <div id="coffee-shops" class="section coffee-container">
+          <h1 class="title white-text">Coffee Shops</h1>
           <div>
             <div id="listOfCoffee" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-              <!-- A lot of the commented section will be done in JS
-                            <div id=coffeeOne>
-                                <div>
-                                    <h2>"Title of Coffee Shop"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Coffee Shop"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=coffeeTwo>
-                                <div>
-                                    <h2>"Title of Coffee Shop"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Coffee Shop"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=coffeeThree>
-                                <div>
-                                    <h2>"Title of Coffee Shop"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Coffee Shop"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                            <div id=coffeeFour>
-                                <div>
-                                    <h2>"Title of Coffee Shop"</h2>
-                                </div>
-                                <div>
-                                    "link for image of Coffee Shop"
-                                    "link to google maps"
-                                </div>
-                                <ul>
-                                    <li>Date</li>
-                                    <li>Time</li>
-                                    <li>Add</li>
-                            </div>
-                    "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                            -->
+             
             </div>
           </div>
         </div>
