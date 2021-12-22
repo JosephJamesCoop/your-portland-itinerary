@@ -1,3 +1,4 @@
+  
 // fetch call to obtain local restaurants, data is logged to the console
 fetch("https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=" + locationId + "&currency=USD&lunit=km&limit=8&lang=en_US", {
 	"method": "GET",

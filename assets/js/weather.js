@@ -94,5 +94,3 @@ var getTempAverage = function(temp) {
 getWeatherData();
 
 
-
-
