@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -50,11 +50,13 @@
                     <h1 class="title">
                         Itinerary
                     </h1>
-                    <div>
-                        <button class="button" onclick="document.getElementById('date-picker').style.display='block'"> Select Travel
-                            Dates</button>
-                        <button class="button" onclick="document.getElementById('date-picker').style.display='block'">Change Travel
-                            Dates</button>
+                    <div style="display: inline-flex; align-items: center;">
+                      <h2>Days Selection: </h2>
+                      <div class="select">
+                        <select id="selection-el">
+
+                        </select>
+                      </div>
                     </div>
                     <div>
                         <div class="cardContainer" id="list-date">
@@ -440,12 +442,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/weather.js"></script>
+  
+  <!-- <script src="./assets/js/weather.js"></script>
   <script src="./assets/js/get-places.js"></script>
   <script src="./assets/js/get-restaurants.js"></script>
   <script src="./assets/js/get-bars.js"></script>
   <script src="./assets/js/get-coffee.js"></script>
-  <script src="./assets/js/card.js"></script>
+  <script src="./assets/js/card.js"></script> -->
   <script src="./assets/js/itinerary-events.js"></script>
   <script src="./assets/js/itinerary.js"></script>
 

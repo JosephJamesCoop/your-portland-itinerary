@@ -1,6 +1,6 @@
-var saveDates = function () {
-  console.log(dates)
-  localStorage.setItem("dates", JSON.stringify(dates));
+var saveDates = function (num) {
+  //console.log(dates)
+  localStorage.setItem("dates", JSON.stringify(num));
 };
 
 // modal was triggered
@@ -109,6 +109,7 @@ $("#new-date-picker").on("show.bs.modal", function () {
 
 
 var loadDates = function () {
+  /*
   dates = JSON.parse(localStorage.getItem("dates"));
   for (let i = 1; i < dates; i++) {
     var portlandDatesLoad = i;
@@ -125,8 +126,39 @@ var loadDates = function () {
 
     // append to ul list on the page
     $("#list-date").append(dateBox);
-  };
+  };*/
 
+  var dates = localStorage.getItem("dates");
+
+  if (dates == null) {
+    dates = 5;
+    renderDates(dates);
+  }
+
+  dates = JSON.parse(dates);
+  renderDates(dates);
 };
+
+var loadDay = function(day) {
+  var day_local = localStorage.getItem("day-" + day);
+
+  if (day_local == null) {
+    return '<p class="content"><i>Nothing planned for Day ' + day + '</i></p>';
+  }
+}
+
+var renderDates = function(dates) {
+  for (var i = 0; i < dates; i++) {
+    var dateCard = document.createElement("div");
+    dateCard.setAttribute("class", "card");
+    dateCard.setAttribute("style", "flex: 1 1 0")
+
+    dateCard.innerHTML = '<h4 class="card-header-title">Day ' + (i + 1) 
+                        + '</h4><ul id="theDate" class="card-content event-options">' + loadDay(i + 1);
+                        + '</ul>';
+
+    listDateEl.appendChild(dateCard);
+  }
+} 
 
 loadDates();
