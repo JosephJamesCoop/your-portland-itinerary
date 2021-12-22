@@ -75,11 +75,11 @@ $("#date-picker").click(function () {
     var portlandDates = i;
     console.log(portlandDates)
 
-    var dateBox = $("<div>").addClass("date");
+    var dateBox = $("<div>").addClass("card");
 
     var dateNumber = $("<h4>").addClass("card-header-title").text("Day  " + portlandDates);
 
-    var eventUl = $("<ul>").addClass("event-options").attr("id", `theDate${i}`).text("");
+    var eventUl = $("<ul>").addClass("event-options card-content event-options").attr("id", `theDate${i}`).text("");
 
     // append span and p element to parent li
     dateBox.append(dateNumber, eventUl);
@@ -88,9 +88,9 @@ $("#date-picker").click(function () {
     $("#list-date").append(dateBox);
   };
 
-   dates = c
+  dates = c
 
-    saveDates();
+  saveDates();
 });
 
 $("#modalArrivalDate").datepicker({
@@ -114,11 +114,11 @@ var loadDates = function () {
     var portlandDatesLoad = i;
     console.log(portlandDatesLoad)
 
-    var dateBox = $("<div>").addClass("date");
+    var dateBox = $("<div>").addClass("card");
 
-    var dateNumber = $("<h4>").addClass("").text("Day  " + portlandDatesLoad);
+    var dateNumber = $("<h4>").addClass("card-header-title").text("Day  " + portlandDatesLoad);
 
-    var eventUl = $("<ul>").addClass("event-options").attr("id", `theDate${i}`).text("");
+    var eventUl = $("<ul>").addClass("event-options card-content event-options").attr("id", `theDate${i}`).text("");
 
     // append span and p element to parent li
     dateBox.append(dateNumber, eventUl);
@@ -130,6 +130,3 @@ var loadDates = function () {
 };
 
 loadDates();
-
-
-
