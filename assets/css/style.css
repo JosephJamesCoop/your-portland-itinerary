@@ -1,3 +1,69 @@
+#weatherAndTime {
+    background: url("../images/portland-panoramic.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#localTime {
+    padding: 0;
+}
+
 .time {
     margin: 30px;
+    height: 90%;
+    background-color: #b29806;
+}
+
+#weatherTitle {
+    margin: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.weatherCardContent {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.weatherCard {
+    width: 300px;
+}
+
+.weatherCard h4 {
+    display: inline;
+    text-align: center;
+}
+
+.iconAndWeather {
+    display: flex;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.weather {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #3e796a;;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar span {
+    color: white;
+}
+
+.navbar a {
+    color: white;
 }
