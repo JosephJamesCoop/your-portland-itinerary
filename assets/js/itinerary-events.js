@@ -1,9 +1,10 @@
 var events = [];
 
+/*
 var saveEvents = function () {
     // console.log("events saving" + events)
     localStorage.setItem("events", JSON.stringify(events));
-};
+};*/
 
 // modal was triggered
 $("#event-picker").on("show.bs.modal", function () {
@@ -13,6 +14,7 @@ $("#event-picker").on("show.bs.modal", function () {
 
 // save button in modal was clicked
 $("#event-picker").click(function () {
+    /*
     var eventStartTime = $("#modalStartTime").val();
     console.log(eventStartTime)
     var eventEndTime = $("#modalEndTime").val();
@@ -51,7 +53,8 @@ $("#event-picker").click(function () {
         );
         console.log(events)
         saveEvents();
-    }
+    } */
+
 });
 
 

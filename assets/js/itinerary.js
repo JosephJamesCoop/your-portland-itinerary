@@ -1,8 +1,3 @@
-var saveDates = function (num) {
-  //console.log(dates)
-  localStorage.setItem("dates", JSON.stringify(num));
-};
-
 // modal was triggered
 $("#date-picker").on("show.bs.modal", function () {
   // clear values
@@ -107,7 +102,12 @@ $("#new-date-picker").on("show.bs.modal", function () {
 
 });
 
+// save the dates
+var saveDates = function(num) {
+  localStorage.setItem("dates", JSON.stringify(num));
+};
 
+// load dates into container
 var loadDates = function () {
   /*
   dates = JSON.parse(localStorage.getItem("dates"));
@@ -132,26 +132,66 @@ var loadDates = function () {
 
   if (dates == null) {
     dates = 5;
+    saveDates(dates);
     renderDates(dates);
+    return;
   }
 
   dates = JSON.parse(dates);
   renderDates(dates);
 };
 
+// save the current day
+var saveDay = function(day, schedule) {
+  localStorage.setItem("day-" + day, JSON.stringify(schedule))
+};
+
+// load the day schedule into a date card
 var loadDay = function(day) {
   var day_local = localStorage.getItem("day-" + day);
 
   if (day_local == null) {
     return '<p class="content"><i>Nothing planned for Day ' + day + '</i></p>';
   }
+
+  day_local = JSON.parse(day_local);
+
+  var listItems = "";
+
+  for (var i = 0; i < day_local.length; i++) {
+    listItems = listItems + '<li class="event-items"><span>' + day_local[i]["event"] + 
+    '</span><p class="is-inline-block card p-2 content has-background-primary has-text-white">' + day_local[i]["time"] + 
+    '</p></li>'
+  }
+
+  return listItems;
 }
 
+// update the days when the user adds a new event
+var updateDay = function(day, activity) {
+  let day_local = localStorage.getItem("day-" + day);
+
+  if (day_local == null) {
+    day_local = [];
+  } else {
+    day_local = JSON.parse(day_local);
+  }
+  console.log(day_local);
+
+  day_local.push(activity);
+  console.log(day_local);
+
+  saveDay(day, day_local)
+  loadDates();
+}
+
+// render dates to dashboard
 var renderDates = function(dates) {
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
     dateCard.setAttribute("class", "card");
     dateCard.setAttribute("style", "flex: 1 1 0")
+    dateCard.setAttribute("id", "card-" + (i + 1));
 
     dateCard.innerHTML = '<h4 class="card-header-title">Day ' + (i + 1) 
                         + '</h4><ul id="theDate" class="card-content event-options">' + loadDay(i + 1);
@@ -160,5 +200,4 @@ var renderDates = function(dates) {
     listDateEl.appendChild(dateCard);
   }
 } 
-
 loadDates();

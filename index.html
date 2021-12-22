@@ -61,20 +61,6 @@
                     <div>
                         <div class="cardContainer" id="list-date">
                             <!-- this is to test the css classes. Will be deleted once testing is done. -->
-                            <div class="card card0">
-                                <h4 class="card-header-title">Day 1</h4>
-                                <ul class="card-content event-options" id="theDate">
-                                  <li class="event-items">
-                                    <!-- displays name of activity or restaurant chosen -->
-                                    <span class="pr-2">Mediterranean Exploration Company</span>
-                                    <p class="is-inline-block card p-2 content has-background-primary has-text-white">7:00PM to 9:00PM</p>
-                                    <!-- displays the starting time user wants to be at the event they choose. -->
-                                    <!-- connects the times with a to between them -->
-                                    <!-- displays the ending time the user wants to be done with the activity. -->
-                                    <!-- the three p's will display like 7:00PM to 9:00PM or whatever length of time the user wants to spend at activity. -->
-                                  </li>
-                                </ul>
-                              </div>
                             <!-- You will be deleting between teh first and this comment. -->
                         </div>
                     </div>
@@ -343,6 +329,7 @@
   </main>
 
   <footer>
+    <!--
     <div class="modal new-event new-date-picker" id="date-picker">
       <div class="modal-background"></div>
       <div class="modal-card">
@@ -368,6 +355,7 @@
         </section>
       </div>
     </div>
+    -->
 
     <div class="modal new-event new-event-picker" id="event-picker">
       <div class="modal-background"></div>
@@ -390,12 +378,23 @@
 
           <div class="form-group">
             <label for="modalStartTime">Start Time:</label>
-            <textarea id="modalStartTime" placeholder="7:00PM" rows="2" class="form-control"></textarea>
+            <div class="select">
+              <select id="modalStartTime"></select>
+            </div>
           </div>
 
           <div class="form-group">
             <label for="modalEndTime">End Time:</label>
-            <textarea id="modalEndTime" placeholder="9:00PM" rows="2" class="form-control"></textarea>
+            <div class="select">
+              <select id="modalEndTime"></select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="modalDay">Day:</label>
+            <div class="select">
+              <select id="modalDay"></select>
+            </div>
           </div>
 
           <!-- <div class="fdorm-group">
@@ -409,9 +408,8 @@
             </div> -->
         </section>
         <section class="modal-card-foot">
-          <button type="button" onclick="document.getElementById('event-picker').style.display='none'">Cancel</button>
-          <button type="button" onclick="document.getElementById('event-picker').style.display='none'">Save
-            Event</button>
+          <button class="button is-danger" type="button" onclick="document.getElementById('event-picker').style.display='none'">Cancel</button>
+          <button class="button is-primary" type="button" onclick="document.getElementById('event-picker').style.display='none'">Save Event</button>
         </section>
       </div>
     </div>
@@ -443,12 +441,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
   
-  <!-- <script src="./assets/js/weather.js"></script>
+  <script src="./assets/js/weather.js"></script>
   <script src="./assets/js/get-places.js"></script>
   <script src="./assets/js/get-restaurants.js"></script>
   <script src="./assets/js/get-bars.js"></script>
-  <script src="./assets/js/get-coffee.js"></script>
-  <script src="./assets/js/card.js"></script> -->
+  <script src="./assets/js/get-coffee.js"></script> 
+  <script src="./assets/js/card.js"></script>
   <script src="./assets/js/itinerary-events.js"></script>
   <script src="./assets/js/itinerary.js"></script>
 
