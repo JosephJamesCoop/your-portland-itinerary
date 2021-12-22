@@ -58,43 +58,43 @@ $("#event-picker").click(function () {
 
 
 
-var loadEvents = function () {
-    events = JSON.parse(localStorage.getItem("events"));
+// var loadEvents = function () {
+//     events = JSON.parse(localStorage.getItem("events"));
 
-    // if nothing in localStorage, create a new object to track all task status arrays
-    if (!events) {
-        // events = {
-        //     day1: [],
-        //     day2: [],
-        //     day3: [],
-        //     day4: [],
-        //     day5: [],
-        //     day6: [],
-        //     day7: [],
-        //     day8: [],
-        //     day9: [],
-        //     day10: [],
-        //     day11: [],
-        //     day12: [],
-        //     day13: [],
-        //     day14: []
-        // };
-        events = [];
-    }
+//     // if nothing in localStorage, create a new object to track all task status arrays
+//     if (!events) {
+//         // events = {
+//         //     day1: [],
+//         //     day2: [],
+//         //     day3: [],
+//         //     day4: [],
+//         //     day5: [],
+//         //     day6: [],
+//         //     day7: [],
+//         //     day8: [],
+//         //     day9: [],
+//         //     day10: [],
+//         //     day11: [],
+//         //     day12: [],
+//         //     day13: [],
+//         //     day14: []
+//         // };
+//         events = [];
+//     }
 
-    // loop over object properties
-    $.each(events, function (list, arr) {
-        console.log(list, arr);
-        // then loop over sub-array
-        arr.forEach(function (events) {
-            createTask(title.text, start.text, end.text);
-            console.log("list" + list)
-        });
-    });
-};
+//     // loop over object properties
+//     $.each(events, function (list, arr) {
+//         console.log(list, arr);
+//         // then loop over sub-array
+//         arr.forEach(function (events) {
+//             createTask(title.text, start.text, end.text);
+//             console.log("list" + list)
+//         });
+//     });
+// };
 
 
-loadEvents();
+// loadEvents();
 
 
 
@@ -125,6 +125,3 @@ loadEvents();
 
 
 // loadEvents();
-
-
-
