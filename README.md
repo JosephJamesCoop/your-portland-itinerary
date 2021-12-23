@@ -17,4 +17,13 @@ This is a travel website that can be used to help plan your trip to Portland, Or
 - jQuery
 
 ## URL
+
+## Primary Contributors:
+- [knharman](https://github.com/knharman)
+- [JosephJamesCoop](https://github.com/JosephJamesCoop)
+- [StaticCloud](https://github.com/StaticCloud)
+
+## Known Bugs/Aspects That Need Work:
+- Modal for adding event to a day is not responsive.
+- Items in itinerary need an overhaul that translates easier to different screen sizes.
  
