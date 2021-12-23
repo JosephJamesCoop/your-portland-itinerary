@@ -6,4 +6,5 @@ fetch("https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=" + lo
 		"x-rapidapi-host": "travel-advisor.p.rapidapi.com",
 		"x-rapidapi-key": "abe879055emsh7feb1d759b7b134p199e3djsnc1b869b0f2a7"
 	}
+
 }).then(response => { if (response) { response.json().then(data => createCards(data, restaurantsContainerEl, "restaurant")) } else {alert("Could not retrieve data for restaurants.")}});
