@@ -75,6 +75,8 @@ var getEl = function(event) {
 
         // append to array that updates schedule
         updateDay(day, newEvent);
+
+        
     }
 }
 
