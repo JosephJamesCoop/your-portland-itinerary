@@ -114,16 +114,11 @@ var loadDates = function () {
   for (let i = 1; i < dates; i++) {
     var portlandDatesLoad = i;
     console.log(portlandDatesLoad)
-
     var dateBox = $("<div>").addClass("card");
-
     var dateNumber = $("<h4>").addClass("card-header-title").text("Day  " + portlandDatesLoad);
-
     var eventUl = $("<ul>").addClass("event-options card-content event-options").attr("id", `theDate${i}`).text("");
-
     // append span and p element to parent li
     dateBox.append(dateNumber, eventUl);
-
     // append to ul list on the page
     $("#list-date").append(dateBox);
   };*/
@@ -165,8 +160,10 @@ var loadDay = function (day) {
   for (var i = 0; i < day_local.length; i++) {
       listItems += `
         <li class="event-items" id="${"event-item-" + i + "-day-" + day}">
-          <p class="is-size-5 has-text-weight-semibold">${day_local[i]["event"]}</p>
-          <span>${day_local[i]["time"]}</span>
+
+          <span class="span-design">${day_local[i]["event"]}</span>
+          <span class="is-inline-block card p-2 has-text-white button-design">${day_local[i]["time"]}</span>
+
           <button class="button is-light is-small mb-5 removeEventBtn" data-day="${day}" data-row="${i}">x</button>
         </li>
       `
@@ -184,6 +181,7 @@ var updateDay = function (day, activity) {
   } else {
     day_local = JSON.parse(day_local);
   }
+
 
   if (day_local.length == 0) {
     day_local.push(activity);
@@ -219,12 +217,13 @@ var renderDates = function (dates) {
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
 
-    dateCard.setAttribute("class", "card itineraryCard");
+    dateCard.setAttribute("class", "card itinerary-box");
     dateCard.setAttribute("style", "flex: 1 1 0");
     dateCard.setAttribute("id", "card-" + (i + 1));
 
     dateCard.innerHTML = `
-      <h4 class="m-2 card-header-title is-size-3">Day ${i + 1}</h4>
+
+      <h4 class="m-2 card-header-title">Day ${i + 1}</h4>
       <ul id="theDate" data-day="${i + 1}" class="card-content event-options">${loadDay(i + 1)}</ul>
     `;
 
@@ -234,6 +233,7 @@ var renderDates = function (dates) {
   $('.removeEventBtn').on('click', function() {
     var day = $(this).attr("data-day");
     var row = $(this).attr("data-row");
+
 
     var id = `#event-item-${row}-day-${day}`;
 
@@ -264,4 +264,6 @@ var removeEventFromLocalStorage = function(event, day) {
   localStorage.setItem("day-" + day, JSON.stringify(events));
 }
 
+
 loadDates();
+

@@ -11,14 +11,15 @@
 </head>
 
 <body>
-  
-  <header>
+
+  <header class="sticky">
+
     <nav class="navbar">
-      <a href="#attractions" class="navbar-item">Attractions</a>
-      <a href="#restaurants" class="navbar-item">Restaurants</a>
-      <span class="navbar-item title mb-0">Your Portland Itinerary</span>
-      <a href="#bars" class="navbar-item">Bars</a>
-      <a href="#coffee-shops" class="navbar-item">Coffee Shops</a>
+      <a href="#attractions" class="navbar-items">Attractions</a>
+      <a href="#restaurants" class="navbar-items">Restaurants</a>
+      <a href="#weatherAndTime" class="YPI title mb-0">Your Portland Itinerary</a>
+      <a href="#bars" class="navbar-items">Bars</a>
+      <a href="#coffee-shops" class="navbar-items">Coffee Shops</a>
     </nav>
   </header>
 
@@ -26,9 +27,9 @@
     <!--This will hold the time and weather-->
     <section class="section" id="weatherAndTime">
       <!--Weather and Time-->
-      <div class="container">
+      <div id="topOfPage" class="container">
         <div class="columns">
-          
+
           <div id="timeWrapper" class="column is-one-quarter has-text-centered">
             <div class="time is-one-quarter card has-text-light">
               <div class="card-content">
@@ -45,73 +46,73 @@
       </div>
     </section>
     <!--This will hold the users itinerary-->
-<section class="body">
-            <div class="section container">
-                <div class="margin">
-                    <h1 class="title white-text">
-                        Itinerary
-                    </h1>
-                    <div style="display: inline-flex; align-items: center;">
 
-                      <h2 class="white-text">Days Selection: </h2>
+    <section class="body">
+      <div class="section container">
+        <div class="margin">
+          <h1 class="title white">
+            Itinerary
+          </h1>
+          <div class="padding-10" style="display: inline-flex; align-items: center;">
+            <h2 class="days-selection">Days Selection: </h2>
+            <div>
+              <select id="selection-el" class="drop-down">
 
-                      <div class="select">
-                        <select id="selection-el">
+              </select>
 
-                        </select>
-                      </div>
-                    </div>
-                    <div>
-                        <div class="cardContainer" id="list-date">
-                         
-                        </div>
-                    </div>
-                </div>
             </div>
-        </section>
+          </div>
+          <div>
+            <div class="cardContainer" id="list-date">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <!--This will hold our events section-->
     <section>
-      
-      
-        <div class="attractions-container">
+
+
+      <div class="attractions-container">
         <div id="attractions" class="section">
-          <h1 class="title white-text">Attractions</h1>
+          <h1 class="title white-text header-adjust">Attractions</h1>
           <div>
             <div id="listOfAttractions" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-             
+
             </div>
           </div>
         </div>
-      
+
         <!--This will hold our Restaurants section -->
         <div class="restaurants-container">
-        <div id="restaurants" class="section">
-          <h1 class="title white-text">Restaurants</h1>
-          <div>
-            <div id="listOfRestaurants" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-            </div>
+          <div id="restaurants" class="section">
+            <h1 class="title white-text header-adjust">Restaurants</h1>
+            <div>
+              <div id="listOfRestaurants" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
+              </div>
             </div>
           </div>
         </div>
 
         <!--This will hold our Bars section-->
         <div id="bars" class="section bars-container">
-          <h1 class="title white-text">Bars</h1>
+          <h1 class="title white-text header-adjust">Bars</h1>
           <div>
             <div id="listOfBars" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-           
+
             </div>
           </div>
         </div>
 
         <!--This will hold our Coffee section-->
         <div id="coffee-shops" class="section coffee-container">
-          <h1 class="title white-text">Coffee Shops</h1>
+          <h1 class="title white-text header-adjust">Coffee Shops</h1>
           <div>
             <div id="listOfCoffee" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
-             
+
             </div>
           </div>
         </div>
@@ -201,8 +202,10 @@
             </div> -->
         </section>
         <section class="modal-card-foot">
-          <button class="button is-danger" type="button" onclick="document.getElementById('event-picker').style.display='none'">Cancel</button>
-          <button class="button is-primary" type="button" onclick="document.getElementById('event-picker').style.display='none'">Save Event</button>
+          <button class="button is-danger" type="button"
+            onclick="document.getElementById('event-picker').style.display='none'">Cancel</button>
+          <button class="button is-primary" type="button"
+            onclick="document.getElementById('event-picker').style.display='none'">Save Event</button>
         </section>
       </div>
     </div>
@@ -233,12 +236,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
-  
+
   <script src="./assets/js/weather.js"></script>
   <script src="./assets/js/get-places.js"></script>
   <script src="./assets/js/get-restaurants.js"></script>
   <script src="./assets/js/get-bars.js"></script>
-  <script src="./assets/js/get-coffee.js"></script> 
+  <script src="./assets/js/get-coffee.js"></script>
   <script src="./assets/js/card.js"></script>
   <script src="./assets/js/itinerary-events.js"></script>
   <script src="./assets/js/itinerary.js"></script>

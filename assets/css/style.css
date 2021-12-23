@@ -1,3 +1,14 @@
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-adjust{
+    margin-top: 30px;
+}
+
 #weatherAndTime {
     background: url("../images/portland-panoramic.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -67,6 +78,31 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+}
+
+.navbar-items {
+    font-size: 18px;
+    margin: none;
+    padding: 18px 10px 10px 10px;
+}
+
+.navbar-items:hover {
+    background-color: #b29806;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.YPI {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: none;
+    padding: 10px;
+}
+
+.YPI:hover{
+    background-color: #b29806;
+    font-weight: bolder;
 }
 
 .navbar span {
@@ -106,15 +142,73 @@
     background-color: #3e796a;
 }
 
+.white {
+    color: white;
+}
 .white-text {
+    color: white;
+    padding-left: 20px;
+}
+
+.days-selection{
+    font-size: 20px;
     color: white;
 }
 
 .itinerary-box{
     background-color: #b29806;
     color: white;
-    border: black;
-    border-color: black;
-    border-width: 2px;
 }
 
+.button.removeEventBtn {
+    background-color: #93b082;
+   color: white;
+   height: 40px;
+   width: 40px;
+   border-radius: 30px;
+   margin-left: 5px;
+   padding: none;
+   font-size: 22px;
+   font-weight: bolder;
+}
+
+.button.removeEventBtn:hover {
+    background-color: red;
+}
+
+.button-design{
+    background-color: #087f8c;
+
+}
+
+.map {
+   background-color: #93b082;
+}
+
+.drop-down {
+    background-color: #3e796a;
+    height: 30px;
+    width: 45px;
+    padding-left: 10px;
+    border: none;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    
+}
+.drop-down:hover {
+    color: white;
+    border-radius: 5px;
+    border-color: #93b082;
+    background-color: #93b082;
+    cursor: pointer;
+}
+
+.span-design {
+    margin-right: 30px;
+   
+}
+
+.padding-10 {
+    padding-bottom: 10px;
+}
