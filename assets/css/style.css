@@ -32,7 +32,7 @@ header {
 }
 
 
-#weatherTitle {
+#weatherTitle, #timeTitle {
     margin: 20px;
     color: white;
     text-shadow: 2px 2px 2px black;
@@ -211,4 +211,18 @@ header {
 
 .padding-10 {
     padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1060px) {
+    #weatherWrapper {
+        width: 400px;
+    }
+
+    #timeWrapper {
+        flex: 1 1 100%;
+    }
+
+    #timeCard {
+        margin: 0 auto;
+    }
 }

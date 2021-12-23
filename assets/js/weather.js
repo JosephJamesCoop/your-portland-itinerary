@@ -22,7 +22,7 @@ var displayWeatherData = function(weatherData) {
     var weatherWrapper = document.getElementById("weatherWrapper")
     
     var cardContainer = document.createElement("div");
-    cardContainer.className = "cardContainer";
+    cardContainer.className = "is-flex is-flex-wrap-wrap is-justify-content-space-around";
 
     weatherWrapper.appendChild(cardContainer);
 
@@ -34,7 +34,7 @@ var displayWeatherData = function(weatherData) {
 
 var singleWeatherCard = function (weatherData) {
     var card = document.createElement("div");
-    card.className = "card weatherCard";
+    card.className = "card weatherCard m-2";
 
     var cardContent = document.createElement("div");
     cardContent.className = "card-content weatherCardContent";
