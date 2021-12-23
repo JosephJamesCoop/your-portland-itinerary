@@ -97,7 +97,7 @@ $("#modalDueDate").datepicker({
 });
 
 
-// reselct modal was triggered
+// reselect modal was triggered
 $("#new-date-picker").on("show.bs.modal", function () {
 
 });
@@ -160,10 +160,8 @@ var loadDay = function (day) {
   for (var i = 0; i < day_local.length; i++) {
       listItems += `
         <li class="event-items" id="${"event-item-" + i + "-day-" + day}">
-
           <span class="span-design">${day_local[i]["event"]}</span>
           <span class="is-inline-block card p-2 has-text-white button-design">${day_local[i]["time"]}</span>
-
           <button class="button is-light is-small mb-5 removeEventBtn" data-day="${day}" data-row="${i}">x</button>
         </li>
       `
