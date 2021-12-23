@@ -1,4 +1,8 @@
 # Your Portland Itinerary 
+
+## Screenshot
+![Screenshot](assets/images/Readme-prev.png)
+
 ## Description
 Travel planner for Portland Oregon.
 #### Your Portland Itinerary
@@ -9,11 +13,8 @@ This is a travel website that can be used to help plan your trip to Portland, Or
 - CSS
 - JavaScript
 - Moment.js
-- Bulma 
+- Bulma
 - jQuery
-
-## Screenshot
-![Screenshot]()
 
 ## URL
  

@@ -52,14 +52,8 @@ var loadTime = function() {
 
 // get the element clicked on the page
 var getEl = function(event) {
-    var targetEl = event.target;
 
-    // if the user selects a day from the dropdown
-    if (targetEl.getAttribute("id") == "day-option") {
-        saveDates(targetEl.text);
-        listDateEl.innerHTML = "";
-        loadDates();
-    }
+    var targetEl = event.target;
 
     // what to do if the user selects add on a card
     if (targetEl.textContent == "Add") {
@@ -84,7 +78,18 @@ var getEl = function(event) {
 
         // append to array that updates schedule
         updateDay(day, newEvent);
+
+        
     }
+}
+
+var getDay = function(event) {
+    var targetDay = event.target.value;
+
+    // if the user selects a day from the dropdown
+    saveDates(targetDay);
+    listDateEl.innerHTML = "";
+    loadDates();
 }
 
 loadTime();
@@ -92,3 +97,4 @@ loadTime();
 setInterval(loadTime, 1000);
 
 document.addEventListener("click", getEl);
+dayDropDownEl.addEventListener("change", getDay);

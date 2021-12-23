@@ -19,7 +19,6 @@ var getWeatherData = function() {
 }
 
 var displayWeatherData = function(weatherData) {
-    console.log(weatherData);
     var weatherWrapper = document.getElementById("weatherWrapper")
     
     var cardContainer = document.createElement("div");
@@ -34,7 +33,6 @@ var displayWeatherData = function(weatherData) {
 }
 
 var singleWeatherCard = function (weatherData) {
-    console.log(weatherData);
     var card = document.createElement("div");
     card.className = "card weatherCard";
 
