@@ -200,7 +200,7 @@ var renderDates = function (dates) {
     dateCard.setAttribute("id", "card-" + (i + 1));
 
     dateCard.innerHTML = `
-      <h4 class="card-header-title">Day ${i + 1}</h4>
+      <h4 class="m-2 card-header-title">Day ${i + 1}</h4>
       <ul id="theDate" data-day="${i + 1}" class="card-content event-options">${loadDay(i + 1)}</ul>
     `;
 
