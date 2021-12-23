@@ -166,16 +166,14 @@ var loadDay = function (day) {
       listItems += `
         <li class="event-items" id="${"event-item-" + i + "-day-" + day}">
           <span>${day_local[i]["event"]}</span>
-          <p class="is-inline-block card p-2 content has-background-primary has-text-white">${day_local[i]["time"]}</p>
-          <button class="button is-light" id="removeEventBtn" data-day="${day}" data-row="${i}">x</button>
+          <span class="is-inline-block card p-2 has-background-primary has-text-white">${day_local[i]["time"]}</span>
+          <button class="button is-light is-small mb-5 removeEventBtn" data-day="${day}" data-row="${i}">x</button>
         </li>
       `
   }
 
   return listItems;
 }
-
-
 
 // update the days when the user adds a new event
 var updateDay = function (day, activity) {
@@ -186,10 +184,8 @@ var updateDay = function (day, activity) {
   } else {
     day_local = JSON.parse(day_local);
   }
-  console.log(day_local);
 
   day_local.push(activity);
-  console.log(day_local);
 
   saveDay(day, day_local)
   loadDates();
@@ -200,7 +196,7 @@ var renderDates = function (dates) {
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
     dateCard.setAttribute("class", "card");
-    dateCard.setAttribute("style", "flex 1 1 1 0");
+    dateCard.setAttribute("style", "flex: 1 1 0");
     dateCard.setAttribute("id", "card-" + (i + 1));
 
     dateCard.innerHTML = `
@@ -210,7 +206,7 @@ var renderDates = function (dates) {
 
     listDateEl.appendChild(dateCard);
   }
-  $('#removeEventBtn').on('click', function() {
+  $('.removeEventBtn').on('click', function() {
     var day = $(this).attr("data-day");
     var row = $(this).attr("data-row");
 
@@ -225,9 +221,8 @@ var renderDates = function (dates) {
     }
 
     removeEventFromLocalStorage(eventObject, day);
-
-    $(id).remove();
-    $('#theDate[data-day="' + day + '"]').html(loadDay(day))
+    $('.cardContainer').empty()
+    renderDates(localStorage.getItem("dates"));
   });
 }
 
