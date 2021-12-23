@@ -26,9 +26,8 @@ const createCards = (fetchResponse, container, type) => {
         openText = '<i class="' + classes + '">' + fetchResponse.data[i].open_now_text + '</i>';
       } else { openText = ""; }
 
-      card.setAttribute("class", "card");
+      card.setAttribute("class", "card-adjust");
       // card.setAttribute("id", type + "-" + index);
-      card.setAttribute("style", "flex: 3 0 30%; margin: 15px;")
       // style and add necessary data using innerHTML
       card.innerHTML = '<div class="card-image" style="background-image: url('
         + fetchResponse.data[i].photo.images.original.url
