@@ -14,7 +14,6 @@ var getWeatherData = function() {
         })
         .catch(function (error) {
             console.log(error);
-            alert("Unable to fetch weather data.");
         })
 }
 

@@ -6,4 +6,4 @@ fetch("https://travel-advisor.p.rapidapi.com/attractions/list?location_id=" + lo
 		"x-rapidapi-key": "abe879055emsh7feb1d759b7b134p199e3djsnc1b869b0f2a7"
 	}
 
-}).then(response => { if (response) { response.json().then(data => createCards(data, placesContainerEl, "place")) } else {alert("Could not retrieve data for attractions.")} });
+}).then(response => { if (response) { response.json().then(data => createCards(data, placesContainerEl, "place")) } else {console.log("Could not retrieve data for attractions.")} });
