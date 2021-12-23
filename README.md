@@ -18,6 +18,8 @@ This is a travel website that can be used to help plan your trip to Portland, Or
 
 ## URL
 
+[Deployed Page](https://josephjamescoop.github.io/your-portland-itinerary/)
+
 ## Primary Contributors:
 - [knharman](https://github.com/knharman)
 - [JosephJamesCoop](https://github.com/JosephJamesCoop)
