@@ -34,11 +34,11 @@ const createCards = (fetchResponse, container, type) => {
         + fetchResponse.data[i].photo.images.original.url
         + `); background-size: cover; height: 300px; position: relative; padding-bottom: 20%;"></div><div class="is-flex"><p id=${type}-${index} class="card-header-title">`
         + fetchResponse.data[i].name
-        + `</p><button id="test" onclick="document.getElementById('event-picker').style.display='block'" style="margin: 12px 16px; margin-right: 0px;" class="button is-primary">Add</button>`
+        + `</p><button id="test" onclick="document.getElementById('event-picker').style.display='block'" style="margin: 12px 16px; margin-right: 0px;" class="button white-text button-design">Add</button>`
         + '<a href="https://www.google.com.sa/maps/place/'
         + fetchResponse.data[i].address_obj.street1 + ', ' + fetchResponse.data[i].address_obj.city + ', '
         + fetchResponse.data[i].address_obj.state
-        + '" target="_blank"><button style="margin: 12px 16px;" class="button is-info">Map</button></a></div>'
+        + '" target="_blank"><button style="margin: 12px 16px;" class="button white-text map ">Map</button></a></div>'
         + openText + '<p class="card-content">'
         + fetchResponse.data[i].description
         + '</p>';
