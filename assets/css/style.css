@@ -11,25 +11,34 @@
 }
 
 .time {
-    margin: 30px;
-    height: 90%;
+   
+    height: 250px;
     background-color: #b29806;
+    width: 300px;
 }
+#timeWrapper{
+    margin-top: auto;
+}
+
 
 #weatherTitle {
     margin: 20px;
     color: white;
     text-shadow: 2px 2px 2px black;
+    text-align: center;
 }
 
 .weatherCardContent {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    background-color: #b29806;
 }
 
 .weatherCard {
     width: 300px;
+    background-color: #b29806;
+    height: 250px;
 }
 
 .weatherCard h4 {
@@ -68,6 +77,7 @@
     color: white;
 }
 
+
 .itineraryCard {
     margin: 10px;
     min-width: 300px;
@@ -75,5 +85,36 @@
 
 .days-selection-header {
     margin-right: 8px;
+}
+
+.attractions-container {
+    background-color: #087f8c;
+}
+
+.restaurants-container {
+    background-color: #93b082;
+}
+
+.bars-container {
+    background-color: #3e796a;
+}
+
+.coffee-container {
+    background-color: #b29806;
+}
+.body {
+    background-color: #3e796a;
+}
+
+.white-text {
+    color: white;
+}
+
+.itinerary-box{
+    background-color: #b29806;
+    color: white;
+    border: black;
+    border-color: black;
+    border-width: 2px;
 }
 

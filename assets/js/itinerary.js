@@ -218,6 +218,7 @@ var renderDates = function (dates) {
   dates = JSON.parse(dates)
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
+
     dateCard.setAttribute("class", "card itineraryCard");
     dateCard.setAttribute("style", "flex: 1 1 0");
     dateCard.setAttribute("id", "card-" + (i + 1));
@@ -226,6 +227,7 @@ var renderDates = function (dates) {
       <h4 class="m-2 card-header-title is-size-3">Day ${i + 1}</h4>
       <ul id="theDate" data-day="${i + 1}" class="card-content event-options">${loadDay(i + 1)}</ul>
     `;
+
 
     listDateEl.appendChild(dateCard);
   }

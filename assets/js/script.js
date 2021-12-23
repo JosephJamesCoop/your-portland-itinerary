@@ -19,8 +19,11 @@ const locationId = 52024;
 for (var i = 0; i < 7; i++) {
     var optionEl1 = document.createElement("option"); var optionEl2 = document.createElement("option");
     optionEl1.setAttribute("id", "day-option"); optionEl2.setAttribute("id", "day-option-modal");
+    console.log(optionEl1);
+    console.log(optionEl2);
     optionEl1.textContent = (i + 1); optionEl2.textContent = (i + 1);
-
+    console.log(optionEl1.textContent);
+    console.log(optionEl2.textContent);
     dayDropDownEl.appendChild(optionEl1); modalDayEl.appendChild(optionEl2);
 }
 
