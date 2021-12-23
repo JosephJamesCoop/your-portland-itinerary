@@ -14,7 +14,7 @@ header {
 }
 
 .header-adjust{
-    margin-top: 30px;
+    margin-top: 90px;
 }
 
 #weatherAndTime {
@@ -90,15 +90,15 @@ header {
 
 .navbar-items {
     font-size: 18px;
-    margin-top: -20px;
-    padding: 18px 10px 0px 10px;
+    margin: 10px, 0, 10px, 0;
+    padding: 0px 10px 0px 10px;
 }
 
 .navbar-items:hover {
     background-color: var(--color-5);
-    margin: 10px;
     font-weight: bolder;
     font-size: 20px;
+    padding-top: 10px;
 }
 
 .YPI {
@@ -131,6 +131,12 @@ header {
     margin-right: 8px;
 }
 
+.card-adjust{
+    background-color: var(--color-1);
+    flex: 3 0 30%;
+    margin: 15px;
+}
+
 .attractions-container {
     background-color: var(--color-2);
 }
@@ -153,7 +159,7 @@ header {
 .white {
     color: var(--color-1);
 }
-.white-text {
+.event-titles {
     color: var(--color-1);
     padding-left: 20px;
 }
@@ -238,12 +244,29 @@ header {
     #timeCard {
         margin: 0 auto;
     }
+    #theDate{
+        width: 350px;
+    }
+    .span-design {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-right: 400px;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
-
-}
-
-@media screen and (max-width: 575px) {
-    
+    #theDate{
+        width: 700px;
+    }
+    .content {
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .span-design {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-right: 400px;
+    }
 }
