@@ -165,8 +165,8 @@ var loadDay = function (day) {
   for (var i = 0; i < day_local.length; i++) {
       listItems += `
         <li class="event-items" id="${"event-item-" + i + "-day-" + day}">
-          <span>${day_local[i]["event"]}</span>
-          <span class="is-inline-block card p-2 has-background-primary has-text-white">${day_local[i]["time"]}</span>
+          <p class="is-size-5 has-text-weight-semibold">${day_local[i]["event"]}</p>
+          <span>${day_local[i]["time"]}</span>
           <button class="button is-light is-small mb-5 removeEventBtn" data-day="${day}" data-row="${i}">x</button>
         </li>
       `
@@ -185,10 +185,32 @@ var updateDay = function (day, activity) {
     day_local = JSON.parse(day_local);
   }
 
-  day_local.push(activity);
+  if (day_local.length == 0) {
+    day_local.push(activity);
+  } else {
+    for(i=0;i<day_local.length;i++) {
+      var activityTime = timeStringToMoment(activity.time);
+      var arrayTime = timeStringToMoment(day_local[i].time);
+      // if start time of activity < day_local[i] start time
+      if (activityTime.isBefore(arrayTime)) {
+        day_local.splice(i, 0, activity);
+        break;
+      } else if (i + 1 == day_local.length) {
+        day_local.push(activity);
+        break;
+      }
+      // stop
+    }
+  }
 
   saveDay(day, day_local)
   loadDates();
+}
+
+var timeStringToMoment = function(timeString) {
+  // 9:00 AM to 9:00 AM
+  timeString = timeString.split(" to ")[0];
+  return moment(timeString, 'h:mm A');
 }
 
 // render dates to dashboard
@@ -196,12 +218,12 @@ var renderDates = function (dates) {
   dates = JSON.parse(dates)
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
-    dateCard.setAttribute("class", "card");
+    dateCard.setAttribute("class", "card itineraryCard");
     dateCard.setAttribute("style", "flex: 1 1 0");
     dateCard.setAttribute("id", "card-" + (i + 1));
 
     dateCard.innerHTML = `
-      <h4 class="m-2 card-header-title">Day ${i + 1}</h4>
+      <h4 class="m-2 card-header-title is-size-3">Day ${i + 1}</h4>
       <ul id="theDate" data-day="${i + 1}" class="card-content event-options">${loadDay(i + 1)}</ul>
     `;
 

@@ -67,3 +67,13 @@
 .navbar a {
     color: white;
 }
+
+.itineraryCard {
+    margin: 10px;
+    min-width: 300px;
+}
+
+.days-selection-header {
+    margin-right: 8px;
+}
+
