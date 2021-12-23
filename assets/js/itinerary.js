@@ -200,12 +200,12 @@ var renderDates = function (dates) {
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
     dateCard.setAttribute("class", "card");
-    dateCard.setAttribute("style", "flex 1 1 0");
+    dateCard.setAttribute("style", "flex 1 1 1 0");
     dateCard.setAttribute("id", "card-" + (i + 1));
 
     dateCard.innerHTML = `
       <h4 class="card-header-title">Day ${i + 1}</h4>
-      <ul id="theDate" class="card-content event-options">${loadDay(i + 1)}</ul>
+      <ul id="theDate" data-day="${i + 1}" class="card-content event-options">${loadDay(i + 1)}</ul>
     `;
 
     listDateEl.appendChild(dateCard);
@@ -227,8 +227,7 @@ var renderDates = function (dates) {
     removeEventFromLocalStorage(eventObject, day);
 
     $(id).remove();
-    $('#theDate')
-    loadDay(day)
+    $('#theDate[data-day="' + day + '"]').html(loadDay(day))
   });
 }
 
