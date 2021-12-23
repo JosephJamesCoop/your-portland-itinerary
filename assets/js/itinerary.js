@@ -193,6 +193,7 @@ var updateDay = function (day, activity) {
 
 // render dates to dashboard
 var renderDates = function (dates) {
+  dates = JSON.parse(dates)
   for (var i = 0; i < dates; i++) {
     var dateCard = document.createElement("div");
     dateCard.setAttribute("class", "card");
@@ -221,7 +222,7 @@ var renderDates = function (dates) {
     }
 
     removeEventFromLocalStorage(eventObject, day);
-    $('.cardContainer').empty()
+    $('#list-date').empty();
     renderDates(localStorage.getItem("dates"));
   });
 }
