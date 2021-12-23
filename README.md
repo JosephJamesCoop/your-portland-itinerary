@@ -7,7 +7,6 @@ This is a travel website that can be used to help plan your trip to Portland, Or
 - HTML
 - CSS
 - JavaScript
-- Bootstrap
 - Moment.js
 - Bulma 
 - jQuery
