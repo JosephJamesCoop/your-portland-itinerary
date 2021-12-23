@@ -270,3 +270,44 @@ header {
         margin-right: 400px;
     }
 }
+
+@media screen and (max-width: 575px) {
+ .YPI {
+     text-align: center;
+ }
+ #theDate {
+     width: 325px;
+     display: flex;
+    flex-wrap: wrap;
+ }
+
+.YPI:hover{
+    background-color: var(--color-3);
+    font-weight: bolder;
+}
+
+.navbar-items:hover {
+    background-color: var(--color-3);
+    font-weight: normal;
+    font-size: 18px;
+    padding: 0px 10px 0px 10px;
+}
+#listOfAttractions {
+    width: 325px;
+}
+.content {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.span-design {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-right: 70px;
+}
+.card-adjust{
+    background-color: var(--color-1);
+    width: 300px;
+    margin: 15px;
+}
+}
