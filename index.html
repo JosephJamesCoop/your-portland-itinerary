@@ -2,329 +2,183 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your Portland Itinerary</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Portland Itinerary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <!-- style navbar with red background -->
-    <header class="navbar is-danger">
-        <!-- center navbar elements -->
-        <ul class="navbar-start navbar-end">
-            <a href="#shopping" class="navbar-item">Shopping</a>
-            <a href="#restaurants" class="navbar-item">Restaurants</a>
-            <li class="navbar-item title mb-0">Your Portland Itinerary</li>
-            <a href="#bars" class="navbar-item">Bars</a>
-            <a href="#coffee-shops" class="navbar-item">Coffee Shops</a>
-        </ul>
-    </header>
 
-    <main>
-        <!--This will hold the Time, Weather and News-->
-        <div>
-            <!--Weather and Time-->
-            <div class = "columns">
-                <!--News-->
-                <div id="weatherWrapper" class="column"></div>
-                <div id="timeWrapper" class="column is-one-quarter has-text-centered">
-                    <div class="time is-one-quarter card has-background-light has-text-dark">
-                        <p class="card-header-title is-centered">Portland Time</p>
-                    
-                        <ul id=localTime class="momentTime card-content"></ul>
-                    
+  <header class="sticky">
 
-                        
-                    </div>
-                </div>
+    <nav class="navbar">
+      <div class="navbar-brand" style="flex: 1 100%">
+        <a href="#topOfPage" class="YPI title" style="margin: 0 auto;">Your Portland Itinerary</a>
+      </div>
+      <div class="navbar">
+          <a href="#attractions" class="navbar-items">Attractions</a>
+          <a href="#restaurants" class="navbar-items">Restaurants</a>
+          <a href="#bars" class="navbar-items">Bars</a>
+          <a href="#coffee-shops" class="navbar-items">Coffee Shops</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="topOfPage">
+    <!--This will hold the time and weather-->
+    <section class="section" id="weatherAndTime">
+      <!--Weather and Time-->
+      <div id="topOfPage" class="container">
+        <div class="is-flex is-flex-wrap-wrap is-align-items-space-around">
+
+          <div id="timeWrapper" class="has-text-centered" style="margin: 0 auto;">
+            <h1 class="title" id="timeTitle">Local Portland Time</h1>
+            <div id="timeCard" class="time is-one-quarter card has-text-light">
+              <div class="card-content">
+                <p class="title is-4 is-centered has-text-light">Portland Time</p>
+                <p class="is-size-1">&#128338;</p>
+                <ul id=localTime class="momentTime card-content"></ul>
+              </div>
             </div>
+          </div>
+          <div id="weatherWrapper" class="has-text-centered" style="margin: 0 auto; margin-top: auto;">
+            <h1 class="title" id="weatherTitle">Portland's 3-day Forecast</h1>
+          </div>
         </div>
-        <!--This will hold the users itinerary-->
-        <div>
-            <ul>
-                <!--We will append the li which will be each day-->
-            </ul>
-        </div>
+      </div>
+    </section>
+    <!--This will hold the users itinerary-->
 
-        <!--This will hold our events section-->
-        <div id="shopping" class="section">
-            <h1 class="title">Shopping</h1>
+    <section class="body">
+      <div class="section container">
+        <div class="margin">
+          <h1 class="title white">
+            Itinerary
+          </h1>
+          <div class="padding-10" style="display: inline-flex; align-items: center;">
+            <h2 class="days-selection">Days Selection: </h2>
             <div>
-                <div id="listOfEvents">
-                    <!-- A lot of the commented section will be done in JS
-                    <div id=eventOne>
-                        <div>
-                            <h2>"Title of Event"</h2>
-                        </div>
-                        <div>
-                            "link for event image"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
+              <select id="selection-el" class="drop-down">
 
-                    <div id=eventTwo>
-                        <div>
-                            <h2>"Title of Event"</h2>
-                        </div>
-                        <div>
-                            "link for event image"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
+              </select>
 
-                    <div id=eventThree>
-                        <div>
-                            <h2>"Title of Event"</h2>
-                        </div>
-                        <div>
-                            "link for event image"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=eventFour>
-                        <div>
-                            <h2>"Title of Event"</h2>
-                        </div>
-                        <div>
-                            "link for event image"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                    -->
-                </div>
             </div>
+          </div>
+          <div>
+            <div class="cardContainer" id="list-date">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--This will hold our events section-->
+    <section>
+
+
+      <div class="attractions-container">
+        <div id="attractions" class="section">
+          <h1 class="title  header-adjust">Attractions</h1>
+          <div>
+            <div id="listOfAttractions" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
+
+            </div>
+          </div>
         </div>
 
         <!--This will hold our Restaurants section -->
-        <div id="restaurants" class="section">
-            <h1 class="title">Restaurants</h1>
+        <div class="restaurants-container">
+          <div id="restaurants" class="section">
+            <h1 class="title  header-adjust">Restaurants</h1>
             <div>
-                <div id="listOfRestaurant">
-                    <!-- A lot of the commented section will be done in JS
-                    <div id=restaurantOne>
-                        <div>
-                            <h2>"Title of Restaurant"</h2>
-                        </div>
-                        <div>
-                            "link for image of Restaurant"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=restaurantTwo>
-                        <div>
-                            <h2>"Title of Restaurant"</h2>
-                        </div>
-                        <div>
-                            "link for image of Restaurant"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=restaurantThree>
-                        <div>
-                            <h2>"Title of Restaurant"</h2>
-                        </div>
-                        <div>
-                            "link for image of Restaurant"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=restaurantFour>
-                        <div>
-                            <h2>"Title of Restaurant"</h2>
-                        </div>
-                        <div>
-                            "link for image of Restaurant"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                    -->
-                </div>
+              <div id="listOfRestaurants" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
+              </div>
             </div>
+          </div>
         </div>
 
         <!--This will hold our Bars section-->
-        <div id="bars" class="section">
-            <h1 class="title">Bars</h1>
-            <div>
-                <div id="listOfBars">
-                    <!-- A lot of the commented section will be done in JS
-                    <div id=barOne>
-                        <div>
-                            <h2>"Title of Bar"</h2>
-                        </div>
-                        <div>
-                            "link for image of bar"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
+        <div id="bars" class="section bars-container">
+          <h1 class="title  header-adjust">Bars</h1>
+          <div>
+            <div id="listOfBars" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
 
-                    <div id=barTwo>
-                        <div>
-                            <h2>"Title of Bar"</h2>
-                        </div>
-                        <div>
-                            "link for image of bar"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=barThree>
-                        <div>
-                            <h2>"Title of Bar"</h2>
-                        </div>
-                        <div>
-                            "link for image of bar"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=barFour>
-                        <div>
-                            <h2>"Title of Bar"</h2>
-                        </div>
-                        <div>
-                            "link for image of bar"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                    -->
-                </div>
             </div>
+          </div>
         </div>
 
         <!--This will hold our Coffee section-->
-        <div id="coffee-shops" class="section">
-            <h1 class="title">Coffee Shops</h1>
-            <div>
-                <div id="listOfCoffee">
-                    <!-- A lot of the commented section will be done in JS
-                    <div id=coffeeOne>
-                        <div>
-                            <h2>"Title of Coffee Shop"</h2>
-                        </div>
-                        <div>
-                            "link for image of Coffee Shop"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
+        <div id="coffee-shops" class="section coffee-container">
+          <h1 class="title  header-adjust">Coffee Shops</h1>
+          <div>
+            <div id="listOfCoffee" class="is-flex is-align-content-space-around is-flex-wrap-wrap">
 
-                    <div id=coffeeTwo>
-                        <div>
-                            <h2>"Title of Coffee Shop"</h2>
-                        </div>
-                        <div>
-                            "link for image of Coffee Shop"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=coffeeThree>
-                        <div>
-                            <h2>"Title of Coffee Shop"</h2>
-                        </div>
-                        <div>
-                            "link for image of Coffee Shop"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-                    <div id=coffeeFour>
-                        <div>
-                            <h2>"Title of Coffee Shop"</h2>
-                        </div>
-                        <div>
-                            "link for image of Coffee Shop"
-                            "link to google maps"
-                        </div>
-                        <ul>
-                            <li>Date</li>
-                            <li>Time</li>
-                            <li>Add</li>
-                    </div>
-
-            "Most likely all of this commented out will be done in JS just providing a visual of the flow"
-                    -->
-                </div>
             </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </main>
 
-    <footer>
-<!--We havve not discussed anything here yet.-->
-    </footer>
+  </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+  <footer>
+    <div class="modal new-event new-event-picker" id="event-picker">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Travel Dates</p>
+
+        </header>
+        <section class="modal-card-body">
+          <div class="form-group">
+            <label for="modalStartTime">Start Time:</label>
+            <div class="select">
+              <select id="modalStartTime"></select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="modalEndTime">End Time:</label>
+            <div class="select">
+              <select id="modalEndTime"></select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="modalDay">Day:</label>
+            <div class="select">
+              <select id="modalDay"></select>
+            </div>
+          </div>
+        </section>
+        <section class="modal-card-foot">
+          <button class="button is-danger" type="button"
+            onclick="document.getElementById('event-picker').style.display='none'">Cancel</button>
+          <button class="button is-primary" type="button"
+            onclick="document.getElementById('event-picker').style.display='none'">Save Event</button>
+        </section>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+  <script src="./assets/js/weather.js"></script>
+  <script src="./assets/js/get-places.js"></script>
+  <script src="./assets/js/get-restaurants.js"></script>
+  <script src="./assets/js/get-bars.js"></script>
+  <script src="./assets/js/get-coffee.js"></script>
+  <script src="./assets/js/card.js"></script>
+  <script src="./assets/js/itinerary-events.js"></script>
+  <script src="./assets/js/itinerary.js"></script>
 </body>
 
 </html>
