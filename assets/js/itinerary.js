@@ -161,6 +161,7 @@ var loadDay = function (day) {
       listItems += `
         <li class="event-items" id="${"event-item-" + i + "-day-" + day}">
           <span class="span-design">${day_local[i]["event"]}</span>
+          <br>
           <span class="is-inline-block card p-2 has-text-white button-design">${day_local[i]["time"]}</span>
           <button class="button is-light is-small mb-5 removeEventBtn" data-day="${day}" data-row="${i}">x</button>
         </li>
