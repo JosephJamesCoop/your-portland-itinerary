@@ -232,6 +232,20 @@ header {
    z-index: 101;
    padding-top: 150px;
 }
+.button.is-danger{
+background-color: var(--color-4);
+}
+.button.is-danger:hover{
+    background-color: var(--color-4);
+}
+.button.is-primary{
+    background-color: var(--color-2);
+}
+.button.is-primary:hover{
+    background-color: var(--color-2);
+
+}
+
 @media screen and (max-width: 1060px) {
     #weatherWrapper {
         width: 400px;
@@ -251,6 +265,13 @@ header {
         font-size: 30px;
         font-weight: bolder;
         margin-right: 400px;
+    }
+    .modal-card{
+        width: 500px;
+        margin: auto;
+    }
+    .modal-card-head{
+        display:block
     }
     
 }
@@ -307,5 +328,19 @@ header {
     background-color: var(--color-1);
     width: 300px;
     margin: 15px;
+}
+header {
+    position: absolute;
+}
+
+.header-adjust{
+    margin-top: 0px;
+}
+#weatherAndTime{
+    margin-top: 150px;
+}
+.modal-card{
+    width: 300px;
+    margin: auto;
 }
 }
